@@ -1,9 +1,466 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-<title>Sito Pronostici</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protocollo del Diavolo Bet</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-Caricamento iniziale...
+  <header class="topbar">
+    <div class="logo-block">
+      <div class="logo-circle">PD</div>
+      <div class="logo-text">
+        <h1>Protocollo del Diavolo Bet</h1>
+        <p class="subtitle">Liste quotidiane, Multigol &amp; Combo, selezione protocollata.</p>
+      </div>
+    </div>
+
+    <a class="telegram-btn" href="https://t.me/+KdKOgdp-tI1lODc8" target="_blank" rel="noopener noreferrer">
+      🔔 Bot Telegram
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">
+      ☰
+    </button>
+  </header>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#over15">Over 1.5 Finale</a></li>
+      <li><a href="#over05ht">Over 0.5 HT</a></li>
+      <li><a href="#over35">Over 3.5</a></li>
+      <li><a href="#multigoal">Multigol / Combo</a></li>
+      <li><a href="#supercombo">Super Combo del Giorno</a></li>
+      <li><a href="#sistema6">Sistema 6 Partite</a></li>
+      <li><a href="#protocollo">Protocollo del Diavolo (2 giocate)</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+
+    <section class="intro-card">
+      <h2>Dashboard Pronostici di Oggi</h2>
+      <p>
+        Tutte le liste sono ottimizzate per il mobile: scorri, scegli la lista che ti serve
+        dal menù in alto e usa il bottone Telegram per ricevere gli aggiornamenti automatici.
+      </p>
+      <div class="chip-row">
+        <span class="chip chip-green">Sistema a fasce attivo</span>
+        <span class="chip chip-red">Protocollo del Diavolo ON</span>
+        <span class="chip chip-blue">Quote non vincolanti</span>
+      </div>
+    </section>
+
+    <!-- OVER 1.5 -->
+    <section id="over15" class="card">
+      <div class="card-header">
+        <h2>Lista Over 1.5 Finale</h2>
+        <span class="tag">Banca rischio basso</span>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Orario</th>
+              <th>Partita</th>
+              <th>Competizione</th>
+              <th>Segno</th>
+              <th>Quota</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>21:00</td>
+              <td>FC Basel 1893 - Aston Villa</td>
+              <td>Europa League</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Lyon - GO Ahead Eagles</td>
+              <td>Europa League</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Rapid Vienna - Omonia Nicosia</td>
+              <td>Conference League</td>
+              <td>Over 1.5</td>
+              <td>1.22</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Hamrun Spartans - Shakhtar Donetsk</td>
+              <td>Conference League</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>KuPS - Lausanne</td>
+              <td>Conference League</td>
+              <td>Over 1.5</td>
+              <td>1.18</td>
+            </tr>
+            <tr>
+              <td>18:45</td>
+              <td>Sturm Graz - FK Crvena Zvezda</td>
+              <td>Europa League</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+            </tr>
+            <tr>
+              <td>18:45</td>
+              <td>FC Midtjylland - Genk</td>
+              <td>Europa League</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+            </tr>
+            <tr>
+              <td>18:45</td>
+              <td>BSC Young Boys - Lille</td>
+              <td>Europa League</td>
+              <td>Over 1.5</td>
+              <td>1.20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- OVER 0.5 HT -->
+    <section id="over05ht" class="card">
+      <div class="card-header">
+        <h2>Lista Over 0.5 HT</h2>
+        <span class="tag">Ricerca gol nei primi 45'</span>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Orario</th>
+              <th>Partita</th>
+              <th>Competizione</th>
+              <th>Segno</th>
+              <th>Quota</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>22:30</td>
+              <td>Real Oruro - Nacional Potosí</td>
+              <td>Primera División Bolivia</td>
+              <td>Over 0.5 HT</td>
+              <td>1.18</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>FC Basel 1893 - Aston Villa</td>
+              <td>Europa League</td>
+              <td>Over 0.5 HT</td>
+              <td>1.25</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Lyon - GO Ahead Eagles</td>
+              <td>Europa League</td>
+              <td>Over 0.5 HT</td>
+              <td>1.25</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Hamrun Spartans - Shakhtar Donetsk</td>
+              <td>Conference League</td>
+              <td>Over 0.5 HT</td>
+              <td>1.25</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Shelbourne - Crystal Palace</td>
+              <td>Conference League</td>
+              <td>Over 0.5 HT</td>
+              <td>1.20</td>
+            </tr>
+            <tr>
+              <td>18:45</td>
+              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
+              <td>Europa League</td>
+              <td>Over 0.5 HT</td>
+              <td>1.18</td>
+            </tr>
+            <tr>
+              <td>18:45</td>
+              <td>BSC Young Boys - Lille</td>
+              <td>Europa League</td>
+              <td>Over 0.5 HT</td>
+              <td>1.28</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- OVER 3.5 -->
+    <section id="over35" class="card">
+      <div class="card-header">
+        <h2>Lista Over 3.5</h2>
+        <span class="tag tag-orange">Quota più alta, rischio maggiore</span>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Orario</th>
+              <th>Partita</th>
+              <th>Competizione</th>
+              <th>Segno</th>
+              <th>Quota</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>22:30</td>
+              <td>Real Oruro - Nacional Potosí</td>
+              <td>Primera División Bolivia</td>
+              <td>Over 3.5</td>
+              <td>1.80</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>Rapid Vienna - Omonia Nicosia</td>
+              <td>Conference League</td>
+              <td>Over 3.5</td>
+              <td>3.00</td>
+            </tr>
+            <tr>
+              <td>18:45</td>
+              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
+              <td>Europa League</td>
+              <td>Over 3.5</td>
+              <td>1.91</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- MULTIGOAL / COMBO -->
+    <section id="multigoal" class="card">
+      <div class="card-header">
+        <h2>Multigol / Combo (create dal protocollo)</h2>
+        <span class="tag tag-purple">Selezione intelligente</span>
+      </div>
+      <p class="section-note">
+        Queste combo sono estratte automaticamente dalle liste Over &amp; HT con logica di rischio crescente.
+      </p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Orario</th>
+              <th>Partita</th>
+              <th>Giocata</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>21:00</td>
+              <td>Lyon - GO Ahead Eagles</td>
+              <td>Multigol 2-4</td>
+              <td>Match con forte tendenza agli Over, fascia rischio bassa.</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>FC Basel 1893 - Aston Villa</td>
+              <td>Over 2.5</td>
+              <td>Combo naturale dalla base Over 1.5 + intensità offensiva.</td>
+            </tr>
+            <tr>
+              <td>18:45</td>
+              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
+              <td>Multigol 3-5</td>
+              <td>Match da punteggio potenzialmente alto, fascia intermedia.</td>
+            </tr>
+            <tr>
+              <td>22:30</td>
+              <td>Real Oruro - Nacional Potosí</td>
+              <td>Multigol 3-6</td>
+              <td>Spinta offensiva e linea Over 3.5 già in lista.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SUPER COMBO DEL GIORNO -->
+    <section id="supercombo" class="card">
+      <div class="card-header">
+        <h2>Super Combo del Giorno (3 partite)</h2>
+        <span class="tag tag-gold">Quota teorica ~ 5.00</span>
+      </div>
+      <p class="section-note">
+        Tre partite selezionate dal protocollo per costruire una multipla “secca” del giorno.
+        La quota è indicativa e dipende dal bookmaker utilizzato.
+      </p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Partita</th>
+              <th>Orario</th>
+              <th>Giocata</th>
+              <th>Quota indicativa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Lyon - GO Ahead Eagles</td>
+              <td>21:00</td>
+              <td>Multigol 2-4</td>
+              <td>~1.80</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>FC Basel 1893 - Aston Villa</td>
+              <td>21:00</td>
+              <td>Over 2.5</td>
+              <td>~1.80</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
+              <td>18:45</td>
+              <td>Over 2.5</td>
+              <td>~1.60</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Moltiplicando le tre quote si ottiene una quota totale intorno a 5.0–5.5 (valore indicativo).
+      </p>
+    </section>
+
+    <!-- SISTEMA 6 PARTITE -->
+    <section id="sistema6" class="card">
+      <div class="card-header">
+        <h2>Sistema 6 Partite (minimo quota totale 5/6)</h2>
+        <span class="tag">Sistema a fasce</span>
+      </div>
+      <p class="section-note">
+        Selezione di 6 partite da usare in sistema (2/6, 3/6, ecc.). L’obiettivo è avere una quota complessiva
+        potenziale di almeno 5–6 volte la puntata, distribuendo il rischio sulle fasce.
+      </p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Partita</th>
+              <th>Orario</th>
+              <th>Segno</th>
+              <th>Quota indicativa</th>
+              <th>Fascia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Lyon - GO Ahead Eagles</td>
+              <td>21:00</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+              <td>A (bassa)</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>FC Basel 1893 - Aston Villa</td>
+              <td>21:00</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+              <td>A (bassa)</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Hamrun Spartans - Shakhtar Donetsk</td>
+              <td>21:00</td>
+              <td>Over 1.5</td>
+              <td>1.17</td>
+              <td>A (bassa)</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>BSC Young Boys - Lille</td>
+              <td>18:45</td>
+              <td>Over 1.5</td>
+              <td>1.20</td>
+              <td>B (media)</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Real Oruro - Nacional Potosí</td>
+              <td>22:30</td>
+              <td>Over 3.5</td>
+              <td>1.80</td>
+              <td>C (alta)</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
+              <td>18:45</td>
+              <td>Over 3.5</td>
+              <td>1.91</td>
+              <td>C (alta)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">
+        Esempio d’uso: puoi strutturare il sistema con più combinazioni sulle fasce A+B e meno sulle C,
+        per tenere la quota potenziale sopra 5/6 ma con rischio distribuito.
+      </p>
+    </section>
+
+    <!-- PROTOCOLLO DEL DIAVOLO -->
+    <section id="protocollo" class="card">
+      <div class="card-header">
+        <h2>Protocollo del Diavolo – 2 Giocate Ufficiali</h2>
+        <span class="tag tag-red">Selezione Elite</span>
+      </div>
+      <p class="section-note">
+        Due partite selezionate dal protocollo con logica di solidità + value. Ogni match contiene due combo
+        alternative per gestire rischio e copertura.
+      </p>
+
+      <div class="protocol-block">
+        <h3>Giocata #1 – Lyon vs GO Ahead Eagles (21:00)</h3>
+        <ul>
+          <li>✅ <strong>Combo A:</strong> 1X + Over 1.5</li>
+          <li>🔥 <strong>Combo B:</strong> Multigol 2-4</li>
+        </ul>
+      </div>
+
+      <div class="protocol-block">
+        <h3>Giocata #2 – VfB Stuttgart vs Maccabi Tel Aviv (18:45)</h3>
+        <ul>
+          <li>✅ <strong>Combo A:</strong> Over 2.5</li>
+          <li>🔥 <strong>Combo B:</strong> Gol (Entrambe le squadre segnano)</li>
+        </ul>
+      </div>
+
+      <p class="disclaimer">
+        Nota: Il protocollo non garantisce vincite. Usare sempre gestione del bankroll e responsabilità.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
