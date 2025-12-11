@@ -2,465 +2,353 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Protocollo del Diavolo Bet</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Protocollo del Diavolo BET</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 20px 16px 10px;
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 0 0 4px;
+    }
+    .sub {
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .main {
+      padding: 10px 14px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section-title {
+      margin: 20px 0 6px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .card {
+      background: #020617;
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      border: 1px solid #111827;
+    }
+    .match-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 4px;
+      gap: 8px;
+    }
+    .league {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #111827;
+      margin-right: 4px;
+    }
+    .odd-line {
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    .chips {
+      margin-top: 4px;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+    .chips span {
+      margin-right: 8px;
+    }
+    .layout-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 720px) {
+      .layout-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .protocol-section {
+      margin-top: 24px;
+      padding: 14px;
+      border-radius: 18px;
+      background: radial-gradient(circle at top, #0f172a, #020617 55%);
+      border: 1px solid #1f2937;
+    }
+    .protocol-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .protocol-col-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 720px) {
+      .protocol-col-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .protocol-col {
+      background: #020617;
+      border-radius: 14px;
+      padding: 10px;
+      border: 1px dashed #1f2937;
+      font-size: 12px;
+    }
+    .protocol-col h4 {
+      margin: 0 0 4px;
+      font-size: 13px;
+    }
+    .protocol-play {
+      margin-bottom: 6px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 6px 14px;
+      border: none;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+    .btn-small {
+      background: #111827;
+      color: #e5e7eb;
+      font-size: 11px;
+      padding: 4px 10px;
+    }
+    .btn-telegram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #0f172a;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 13px;
+      border: 1px solid #1f2937;
+    }
+    .toast {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #111827;
+      color: #e5e7eb;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 50;
+    }
+    .toast.show {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="logo-block">
-      <div class="logo-circle">PD</div>
-      <div class="logo-text">
-        <h1>Protocollo del Diavolo Bet</h1>
-        <p class="subtitle">Liste quotidiane, Multigol &amp; Combo, selezione protocollata.</p>
-      </div>
+  <header>
+    <h1>📱 Protocollo del Diavolo BET</h1>
+    <div class="sub">
+      Ricevi la lista → ricevi lo ZIP → lo carichi su Vercel → il sito si aggiorna. Niente PC.
     </div>
-
-    <a class="telegram-btn" href="https://t.me/+KdKOgdp-tI1lODc8" target="_blank" rel="noopener noreferrer">
-      🔔 Bot Telegram
-    </a>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">
-      ☰
-    </button>
   </header>
 
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="#over15">Over 1.5 Finale</a></li>
-      <li><a href="#over05ht">Over 0.5 HT</a></li>
-      <li><a href="#over35">Over 3.5</a></li>
-      <li><a href="#multigoal">Multigol / Combo</a></li>
-      <li><a href="#supercombo">Super Combo del Giorno</a></li>
-      <li><a href="#sistema6">Sistema 6 Partite</a></li>
-      <li><a href="#protocollo">Protocollo del Diavolo (2 giocate)</a></li>
-    </ul>
-  </nav>
+  <main class="main">
+    <!-- LINK BOT TELEGRAM -->
+    <div style="margin-top: 6px; margin-bottom: 10px; display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
+      <a class="btn-telegram-link" href="https://t.me/+KdKOgdp-tI1lODc8" target="_blank" rel="noopener">
+        🤖 Apri bot / canale Telegram
+      </a>
+      <button class="btn btn-small" onclick="testTelegram()">Test invio al bot</button>
+    </div>
 
-  <main class="content">
+    <!-- LISTE -->
+    <h2 class="section-title">Over 1.5 Finale – 12/12/2025</h2>
+    <section class="layout-2" id="list-over15"></section>
 
-    <section class="intro-card">
-      <h2>Dashboard Pronostici di Oggi</h2>
-      <p>
-        Tutte le liste sono ottimizzate per il mobile: scorri, scegli la lista che ti serve
-        dal menù in alto e usa il bottone Telegram per ricevere gli aggiornamenti automatici.
-      </p>
-      <div class="chip-row">
-        <span class="chip chip-green">Sistema a fasce attivo</span>
-        <span class="chip chip-red">Protocollo del Diavolo ON</span>
-        <span class="chip chip-blue">Quote non vincolanti</span>
+    <h2 class="section-title">Over 0.5 HT – 12/12/2025</h2>
+    <section class="layout-2" id="list-ht"></section>
+
+    <h2 class="section-title">Over 3.5 – 12/12/2025</h2>
+    <section class="layout-2" id="list-over35"></section>
+
+    <!-- PROTOCOLLO DEL DIAVOLO AUTOMATICO -->
+    <section class="protocol-section">
+      <div class="protocol-title">
+        <div>
+          <div style="font-size:14px; font-weight:600;">😈 Protocollo del Diavolo – Giocate del giorno</div>
+          <div style="font-size:11px; color:#9ca3af;">Scelte automatiche dal sistema sulle tre liste.</div>
+        </div>
+        <button class="btn btn-small" onclick="sendAllProtocolToTelegram()">Invia tutte al bot</button>
+      </div>
+
+      <div class="protocol-col-grid">
+        <div class="protocol-col" id="col-over15"></div>
+        <div class="protocol-col" id="col-ht"></div>
+        <div class="protocol-col" id="col-over35"></div>
       </div>
     </section>
 
-    <!-- OVER 1.5 -->
-    <section id="over15" class="card">
-      <div class="card-header">
-        <h2>Lista Over 1.5 Finale</h2>
-        <span class="tag">Banca rischio basso</span>
-      </div>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Orario</th>
-              <th>Partita</th>
-              <th>Competizione</th>
-              <th>Segno</th>
-              <th>Quota</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>21:00</td>
-              <td>FC Basel 1893 - Aston Villa</td>
-              <td>Europa League</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Lyon - GO Ahead Eagles</td>
-              <td>Europa League</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Rapid Vienna - Omonia Nicosia</td>
-              <td>Conference League</td>
-              <td>Over 1.5</td>
-              <td>1.22</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Hamrun Spartans - Shakhtar Donetsk</td>
-              <td>Conference League</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>KuPS - Lausanne</td>
-              <td>Conference League</td>
-              <td>Over 1.5</td>
-              <td>1.18</td>
-            </tr>
-            <tr>
-              <td>18:45</td>
-              <td>Sturm Graz - FK Crvena Zvezda</td>
-              <td>Europa League</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-            </tr>
-            <tr>
-              <td>18:45</td>
-              <td>FC Midtjylland - Genk</td>
-              <td>Europa League</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-            </tr>
-            <tr>
-              <td>18:45</td>
-              <td>BSC Young Boys - Lille</td>
-              <td>Europa League</td>
-              <td>Over 1.5</td>
-              <td>1.20</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- OVER 0.5 HT -->
-    <section id="over05ht" class="card">
-      <div class="card-header">
-        <h2>Lista Over 0.5 HT</h2>
-        <span class="tag">Ricerca gol nei primi 45'</span>
-      </div>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Orario</th>
-              <th>Partita</th>
-              <th>Competizione</th>
-              <th>Segno</th>
-              <th>Quota</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>22:30</td>
-              <td>Real Oruro - Nacional Potosí</td>
-              <td>Primera División Bolivia</td>
-              <td>Over 0.5 HT</td>
-              <td>1.18</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>FC Basel 1893 - Aston Villa</td>
-              <td>Europa League</td>
-              <td>Over 0.5 HT</td>
-              <td>1.25</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Lyon - GO Ahead Eagles</td>
-              <td>Europa League</td>
-              <td>Over 0.5 HT</td>
-              <td>1.25</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Hamrun Spartans - Shakhtar Donetsk</td>
-              <td>Conference League</td>
-              <td>Over 0.5 HT</td>
-              <td>1.25</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Shelbourne - Crystal Palace</td>
-              <td>Conference League</td>
-              <td>Over 0.5 HT</td>
-              <td>1.20</td>
-            </tr>
-            <tr>
-              <td>18:45</td>
-              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
-              <td>Europa League</td>
-              <td>Over 0.5 HT</td>
-              <td>1.18</td>
-            </tr>
-            <tr>
-              <td>18:45</td>
-              <td>BSC Young Boys - Lille</td>
-              <td>Europa League</td>
-              <td>Over 0.5 HT</td>
-              <td>1.28</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- OVER 3.5 -->
-    <section id="over35" class="card">
-      <div class="card-header">
-        <h2>Lista Over 3.5</h2>
-        <span class="tag tag-orange">Quota più alta, rischio maggiore</span>
-      </div>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Orario</th>
-              <th>Partita</th>
-              <th>Competizione</th>
-              <th>Segno</th>
-              <th>Quota</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>22:30</td>
-              <td>Real Oruro - Nacional Potosí</td>
-              <td>Primera División Bolivia</td>
-              <td>Over 3.5</td>
-              <td>1.80</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>Rapid Vienna - Omonia Nicosia</td>
-              <td>Conference League</td>
-              <td>Over 3.5</td>
-              <td>3.00</td>
-            </tr>
-            <tr>
-              <td>18:45</td>
-              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
-              <td>Europa League</td>
-              <td>Over 3.5</td>
-              <td>1.91</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- MULTIGOAL / COMBO -->
-    <section id="multigoal" class="card">
-      <div class="card-header">
-        <h2>Multigol / Combo (create dal protocollo)</h2>
-        <span class="tag tag-purple">Selezione intelligente</span>
-      </div>
-      <p class="section-note">
-        Queste combo sono estratte automaticamente dalle liste Over &amp; HT con logica di rischio crescente.
-      </p>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Orario</th>
-              <th>Partita</th>
-              <th>Giocata</th>
-              <th>Note</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>21:00</td>
-              <td>Lyon - GO Ahead Eagles</td>
-              <td>Multigol 2-4</td>
-              <td>Match con forte tendenza agli Over, fascia rischio bassa.</td>
-            </tr>
-            <tr>
-              <td>21:00</td>
-              <td>FC Basel 1893 - Aston Villa</td>
-              <td>Over 2.5</td>
-              <td>Combo naturale dalla base Over 1.5 + intensità offensiva.</td>
-            </tr>
-            <tr>
-              <td>18:45</td>
-              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
-              <td>Multigol 3-5</td>
-              <td>Match da punteggio potenzialmente alto, fascia intermedia.</td>
-            </tr>
-            <tr>
-              <td>22:30</td>
-              <td>Real Oruro - Nacional Potosí</td>
-              <td>Multigol 3-6</td>
-              <td>Spinta offensiva e linea Over 3.5 già in lista.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- SUPER COMBO DEL GIORNO -->
-    <section id="supercombo" class="card">
-      <div class="card-header">
-        <h2>Super Combo del Giorno (3 partite)</h2>
-        <span class="tag tag-gold">Quota teorica ~ 5.00</span>
-      </div>
-      <p class="section-note">
-        Tre partite selezionate dal protocollo per costruire una multipla “secca” del giorno.
-        La quota è indicativa e dipende dal bookmaker utilizzato.
-      </p>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Partita</th>
-              <th>Orario</th>
-              <th>Giocata</th>
-              <th>Quota indicativa</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Lyon - GO Ahead Eagles</td>
-              <td>21:00</td>
-              <td>Multigol 2-4</td>
-              <td>~1.80</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>FC Basel 1893 - Aston Villa</td>
-              <td>21:00</td>
-              <td>Over 2.5</td>
-              <td>~1.80</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
-              <td>18:45</td>
-              <td>Over 2.5</td>
-              <td>~1.60</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="section-note">
-        Moltiplicando le tre quote si ottiene una quota totale intorno a 5.0–5.5 (valore indicativo).
-      </p>
-    </section>
-
-    <!-- SISTEMA 6 PARTITE -->
-    <section id="sistema6" class="card">
-      <div class="card-header">
-        <h2>Sistema 6 Partite (minimo quota totale 5/6)</h2>
-        <span class="tag">Sistema a fasce</span>
-      </div>
-      <p class="section-note">
-        Selezione di 6 partite da usare in sistema (2/6, 3/6, ecc.). L’obiettivo è avere una quota complessiva
-        potenziale di almeno 5–6 volte la puntata, distribuendo il rischio sulle fasce.
-      </p>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Partita</th>
-              <th>Orario</th>
-              <th>Segno</th>
-              <th>Quota indicativa</th>
-              <th>Fascia</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Lyon - GO Ahead Eagles</td>
-              <td>21:00</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-              <td>A (bassa)</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>FC Basel 1893 - Aston Villa</td>
-              <td>21:00</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-              <td>A (bassa)</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Hamrun Spartans - Shakhtar Donetsk</td>
-              <td>21:00</td>
-              <td>Over 1.5</td>
-              <td>1.17</td>
-              <td>A (bassa)</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>BSC Young Boys - Lille</td>
-              <td>18:45</td>
-              <td>Over 1.5</td>
-              <td>1.20</td>
-              <td>B (media)</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Real Oruro - Nacional Potosí</td>
-              <td>22:30</td>
-              <td>Over 3.5</td>
-              <td>1.80</td>
-              <td>C (alta)</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>VfB Stuttgart - Maccabi Tel Aviv</td>
-              <td>18:45</td>
-              <td>Over 3.5</td>
-              <td>1.91</td>
-              <td>C (alta)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="section-note">
-        Esempio d’uso: puoi strutturare il sistema con più combinazioni sulle fasce A+B e meno sulle C,
-        per tenere la quota potenziale sopra 5/6 ma con rischio distribuito.
-      </p>
-    </section>
-
-    <!-- PROTOCOLLO DEL DIAVOLO -->
-    <section id="protocollo" class="card">
-      <div class="card-header">
-        <h2>Protocollo del Diavolo – 2 Giocate Ufficiali</h2>
-        <span class="tag tag-red">Selezione Elite</span>
-      </div>
-      <p class="section-note">
-        Due partite selezionate dal protocollo con logica di solidità + value. Ogni match contiene due combo
-        alternative per gestire rischio e copertura.
-      </p>
-
-      <div class="protocol-block">
-        <h3>Giocata #1 – Lyon vs GO Ahead Eagles (21:00)</h3>
-        <ul>
-          <li>✅ <strong>Combo A:</strong> 1X + Over 1.5</li>
-          <li>🔥 <strong>Combo B:</strong> Multigol 2-4</li>
-        </ul>
-      </div>
-
-      <div class="protocol-block">
-        <h3>Giocata #2 – VfB Stuttgart vs Maccabi Tel Aviv (18:45)</h3>
-        <ul>
-          <li>✅ <strong>Combo A:</strong> Over 2.5</li>
-          <li>🔥 <strong>Combo B:</strong> Gol (Entrambe le squadre segnano)</li>
-        </ul>
-      </div>
-
-      <p class="disclaimer">
-        Nota: Il protocollo non garantisce vincite. Usare sempre gestione del bankroll e responsabilità.
-      </p>
-    </section>
-
+    <div id="toast" class="toast">Messaggio inviato</div>
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    // === DATI LISTE ===
+    const listOver15 = [
+      { match: "Real Sociedad - Girona", time: "21:00", league: "La Liga • Spagna", segno: "Over 1.5", quota: 1.25, prono: 76.19, genius: 83.93 },
+      { match: "Den Bosch - VVV Venlo", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 1.5", quota: 1.17, prono: 81.04, genius: 91.95 },
+      { match: "PAU - Amiens", time: "20:00", league: "Ligue 2 • Francia", segno: "Over 1.5", quota: 1.20, prono: 78.3, genius: 82.9 },
+      { match: "FC Liefering - Rapid Wien II", time: "18:00", league: "2. Liga • Austria", segno: "Over 1.5", quota: 1.17, prono: 79.37, genius: 94.97 },
+      { match: "Maccabi Kabilio Jaffa - Hapoel Kfar Shalem", time: "14:00", league: "Liga Leumit • Israele", segno: "Over 1.5", quota: 1.17, prono: 79.37, genius: 90.74 },
+      { match: "Kafr Qasim - Ironi Modi'in", time: "14:00", league: "Liga Leumit • Israele", segno: "Over 1.5", quota: 1.25, prono: 75, genius: 88.89 },
+      { match: "Maccabi Petah Tikva - Hapoel Rishon LeZion", time: "14:00", league: "Liga Leumit • Israele", segno: "Over 1.5", quota: 1.22, prono: 76.63, genius: 81.4 },
+    ];
+
+    const listHT = [
+      { match: "Coleraine FC - Bangor", time: "20:45", league: "Premiership • Northern Ireland", segno: "Over 0.5 HT", quota: 1.22, prono: 76.63 },
+      { match: "De Graafschap - Roda", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 0.5 HT", quota: 1.22, prono: 76.63 },
+      { match: "Den Bosch - VVV Venlo", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 0.5 HT", quota: 1.25, prono: 75 },
+      { match: "Jong AZ - Jong Utrecht", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 0.5 HT", quota: 1.25, prono: 75 },
+      { match: "Jong PSV - Almere City FC", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 0.5 HT", quota: 1.18, prono: 79.23 },
+      { match: "MVV - Jong Ajax", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 0.5 HT", quota: 1.25, prono: 75 },
+      { match: "FC OSS - ADO Den Haag", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 0.5 HT", quota: 1.22, prono: 76.63 },
+    ];
+
+    const listOver35 = [
+      { match: "Den Bosch - VVV Venlo", time: "20:00", league: "Eerste Divisie • Olanda", segno: "Over 3.5", quota: 2.25, prono: 41.1, genius: 58.78 },
+      { match: "FC Liefering - Rapid Wien II", time: "18:00", league: "2. Liga • Austria", segno: "Over 3.5", quota: 2.50, prono: 37.5, genius: 68.71 },
+      { match: "Maccabi Kabilio Jaffa - Hapoel Kfar Shalem", time: "14:00", league: "Liga Leumit • Israele", segno: "Over 3.5", quota: 2.25, prono: 41.1, genius: 55.26 },
+      { match: "Kafr Qasim - Ironi Modi'in", time: "14:00", league: "Liga Leumit • Israele", segno: "Over 3.5", quota: 3.00, prono: 31.19, genius: 50.92 },
+      { match: "Ludogorets II - Hebar 1918", time: "13:00", league: "Second League • Bulgaria", segno: "Over 3.5", quota: 3.75, prono: 25, genius: 56.07 },
+    ];
+
+    function renderList(list, containerId) {
+      const root = document.getElementById(containerId);
+      root.innerHTML = "";
+      list.forEach(item => {
+        const div = document.createElement("article");
+        div.className = "card";
+        div.innerHTML = `
+          <div class="match-top">
+            <div>${item.match}</div>
+            <div>${item.time}</div>
+          </div>
+          <div class="league">${item.league}</div>
+          <div class="odd-line">
+            <span class="tag">${item.segno}</span>
+            <span class="tag">Quota ${item.quota}</span>
+          </div>
+          <div class="chips">
+            ${item.prono ? `<span>Prono: ${item.prono}%</span>` : ""}
+            ${item.genius ? `<span>Genius: ${item.genius}%</span>` : ""}
+          </div>
+        `;
+        root.appendChild(div);
+      });
+    }
+
+    renderList(listOver15, "list-over15");
+    renderList(listHT, "list-ht");
+    renderList(listOver35, "list-over35");
+
+    // === PROTOCOLLO DEL DIAVOLO (2 giocate per lista) ===
+    const protocolPlays = {
+      over15: [
+        { match: "FC Liefering - Rapid Wien II", giocata: "Over 1.5 + Gol", nota: "Quota bassa ma match aperto" },
+        { match: "Maccabi Kabilio Jaffa - Hapoel Kfar Shalem", giocata: "Multigol 2–4", nota: "Trend offensivo equilibrato" },
+      ],
+      ht: [
+        { match: "Coleraine FC - Bangor", giocata: "Over 0.5 HT + Over 1.5 finale", nota: "Buona spinta offensiva" },
+        { match: "De Graafschap - Roda", giocata: "Multigol 1–2 HT", nota: "Primo tempo spesso vivo" },
+      ],
+      over35: [
+        { match: "FC Liefering - Rapid Wien II", giocata: "Over 3.5 + Gol", nota: "Partita da ritmo alto" },
+        { match: "Den Bosch - VVV Venlo", giocata: "Multigol 3–5", nota: "Difese leggere, attacchi propositivi" },
+      ],
+    };
+
+    function renderProtocolColumn(key, title, elementId) {
+      const col = document.getElementById(elementId);
+      const plays = protocolPlays[key];
+      col.innerHTML = `<h4>${title}</h4>`;
+      plays.forEach((p, index) => {
+        col.innerHTML += `
+          <div class="protocol-play">
+            <div><strong>${p.match}</strong></div>
+            <div>${p.giocata}</div>
+            <div style="font-size:11px; color:#9ca3af;">${p.nota}</div>
+            <button class="btn btn-small" onclick="sendProtocolPlay('${key}', ${index})">Invia al bot</button>
+          </div>
+        `;
+      });
+    }
+
+    renderProtocolColumn("over15", "Over 1.5", "col-over15");
+    renderProtocolColumn("ht", "HT", "col-ht");
+    renderProtocolColumn("over35", "Over 3.5", "col-over35");
+
+    async function sendToTelegram(text) {
+      try {
+        const url = "/api/send-signal?text=" + encodeURIComponent(text);
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP error");
+        showToast("Inviato al bot Telegram");
+      } catch (err) {
+        console.error(err);
+        showToast("Errore invio (controlla TOKEN su Vercel)");
+      }
+    }
+
+    function sendProtocolPlay(key, index) {
+      const p = protocolPlays[key][index];
+      const text = `😈 Protocollo del Diavolo\n${p.match}\nGiocata: ${p.giocata}\nNota: ${p.nota}`;
+      sendToTelegram(text);
+    }
+
+    function sendAllProtocolToTelegram() {
+      const all = [
+        ...protocolPlays.over15,
+        ...protocolPlays.ht,
+        ...protocolPlays.over35,
+      ];
+      const text = all.map(p => `${p.match} → ${p.giocata}`).join("\n");
+      sendToTelegram("😈 Protocollo del Diavolo – Giocate del giorno\n" + text);
+    }
+
+    function testTelegram() {
+      sendToTelegram("✅ Test collegamento API → Bot/Canale Telegram (Protocollo del Diavolo BET).");
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2000);
+    }
+  </script>
 </body>
 </html>
