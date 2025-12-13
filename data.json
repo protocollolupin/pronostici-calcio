@@ -1,0 +1,1336 @@
+{
+  "date": "13-12-2025",
+  "telegram": "https://t.me/Lupinlivesegnali",
+  "matches": [
+    {
+      "date": "13-12-2025",
+      "time": "09:35",
+      "home": "Melbourne Victory",
+      "away": "Adelaide United",
+      "comp": "A-League • Australia",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        },
+        "Over 1.5": {
+          "odds": 1.17,
+          "prono": 81.04
+        }
+      },
+      "fascia": "A",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "11:45",
+      "home": "Perth Glory",
+      "away": "Sydney",
+      "comp": "A-League • Australia",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.28,
+          "prono": 73.22
+        },
+        "Over 1.5": {
+          "odds": 1.17,
+          "prono": 81.04
+        }
+      },
+      "fascia": "A",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "12:30",
+      "home": "Uthai Thani",
+      "away": "Prachuap",
+      "comp": "Thai League 1 • Tailandia",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.22,
+          "prono": 76.63
+        },
+        "Over 3.5": {
+          "odds": 2.62,
+          "prono": 35.47
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "14:00",
+      "home": "Atletico Madrid",
+      "away": "Valencia",
+      "comp": "La Liga • Spagna",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.22,
+          "prono": 78.02
+        },
+        "Over 3.5": {
+          "odds": 2.75,
+          "prono": 34.37
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "14:00",
+      "home": "RED Star FC 93",
+      "away": "Reims",
+      "comp": "Ligue 2 • Francia",
+      "markets": {
+        "Over 3.5": {
+          "odds": 3.5,
+          "prono": 26.78
+        }
+      },
+      "fascia": "D",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "14:00",
+      "home": "FC Saarbrücken",
+      "away": "Hoffenheim II",
+      "comp": "3. Liga • Germania",
+      "markets": {
+        "Over 3.5": {
+          "odds": 2.5,
+          "prono": 37.5
+        }
+      },
+      "fascia": "D",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "15:00",
+      "home": "Hradec Králové",
+      "away": "Mlada Boleslav",
+      "comp": "Czech Liga • Czech Republic",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.2,
+          "prono": 78.3
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "15:00",
+      "home": "Kayserispor",
+      "away": "Alanyaspor",
+      "comp": "Süper Lig • Turchia",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.2,
+          "prono": 78.3
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "15:30",
+      "home": "1899 Hoffenheim",
+      "away": "Hamburger SV",
+      "comp": "Bundesliga • Germania",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "15:30",
+      "home": "Eintracht Frankfurt",
+      "away": "FC Augsburg",
+      "comp": "Bundesliga • Germania",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.17,
+          "prono": 81.04
+        }
+      },
+      "fascia": "A",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Liverpool",
+      "away": "Brighton",
+      "comp": "Premier League • Inghilterra",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Linfield",
+      "away": "Crusaders FC",
+      "comp": "Premiership • Northern Ireland",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Limavady United",
+      "away": "Armagh City",
+      "comp": "Championship • Northern Ireland",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Ards",
+      "away": "Newington Youth",
+      "comp": "Championship • Northern Ireland",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.2,
+          "prono": 78.3
+        },
+        "Over 3.5": {
+          "odds": 2.5,
+          "prono": 37.5
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Cercle Brugge",
+      "away": "KV Mechelen",
+      "comp": "Jupiler Pro League • Belgio",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.18,
+          "prono": 79.23
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Dundee Utd",
+      "away": "Motherwell",
+      "comp": "Premiership • Scozia",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.28,
+          "prono": 74.55
+        }
+      },
+      "fascia": "C",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Portadown",
+      "away": "Ballymena United",
+      "comp": "Premiership • Northern Ireland",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Barnsley",
+      "away": "Leyton Orient",
+      "comp": "League One • Inghilterra",
+      "markets": {
+        "Over 3.5": {
+          "odds": 2.62,
+          "prono": 35.47
+        }
+      },
+      "fascia": "D",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:00",
+      "home": "Levadiakos",
+      "away": "Larisa",
+      "comp": "Super League 1 • Grecia",
+      "markets": {
+        "Over 3.5": {
+          "odds": 2.75,
+          "prono": 33.73
+        }
+      },
+      "fascia": "D",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:30",
+      "home": "Telstar",
+      "away": "NEC Nijmegen",
+      "comp": "Eredivisie • Olanda",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        },
+        "Over 3.5": {
+          "odds": 2.2,
+          "prono": 42.41
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:30",
+      "home": "Vojvodina",
+      "away": "OFK Beograd",
+      "comp": "Super Liga • Serbia",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.2,
+          "prono": 78.3
+        },
+        "Over 3.5": {
+          "odds": 2.62,
+          "prono": 35.47
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "16:30",
+      "home": "Verl",
+      "away": "Rot-weiss Essen",
+      "comp": "3. Liga • Germania",
+      "markets": {
+        "Over 3.5": {
+          "odds": 2.25,
+          "prono": 41.1
+        }
+      },
+      "fascia": "D",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "17:00",
+      "home": "Apoel Nicosia",
+      "away": "Digenis Ypsonas",
+      "comp": "1. Division • Cipro",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "17:00",
+      "home": "Rennes",
+      "away": "Stade Brestois 29",
+      "comp": "Ligue 1 • Francia",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.22,
+          "prono": 78.02
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "17:00",
+      "home": "Hapoel Haifa",
+      "away": "Ironi Tiberias",
+      "comp": "Ligat Ha'al • Israele",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        },
+        "Over 3.5": {
+          "odds": 3.0,
+          "prono": 31.19
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:00",
+      "home": "FC Zurich",
+      "away": "FC Winterthur",
+      "comp": "Super League • Svizzera",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.22,
+          "prono": 76.63
+        },
+        "Over 3.5": {
+          "odds": 2.1,
+          "prono": 44.3
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:00",
+      "home": "FC Copenhagen",
+      "away": "Esbjerg",
+      "comp": "DBU Pokalen • Danimarca",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.2,
+          "prono": 78.3
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:00",
+      "home": "Antalyaspor",
+      "away": "Galatasaray",
+      "comp": "Süper Lig • Turchia",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.18,
+          "prono": 79.23
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:00",
+      "home": "Tatran Prešov",
+      "away": "Zemplín Michalovce",
+      "comp": "Super Liga • Slovacchia",
+      "markets": {
+        "Over 1.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:30",
+      "home": "FK Partizan",
+      "away": "Napredak",
+      "comp": "Super Liga • Serbia",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.22,
+          "prono": 76.63
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:30",
+      "home": "Bayer Leverkusen",
+      "away": "1.FC Köln",
+      "comp": "Bundesliga • Germania",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:30",
+      "home": "Hapoel Beer Sheva",
+      "away": "Maccabi Netanya",
+      "comp": "Ligat Ha'al • Israele",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.22,
+          "prono": 76.63
+        },
+        "Over 3.5": {
+          "odds": 2.0,
+          "prono": 46.38
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "18:30",
+      "home": "Barcelona",
+      "away": "Osasuna",
+      "comp": "La Liga • Spagna",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.17,
+          "prono": 81.04
+        }
+      },
+      "fascia": "A",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "19:00",
+      "home": "Metz",
+      "away": "Paris Saint Germain",
+      "comp": "Ligue 1 • Francia",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.2,
+          "prono": 78.3
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "19:00",
+      "home": "MTK Budapest",
+      "away": "Ujpest",
+      "comp": "NB I • Ungheria",
+      "markets": {
+        "Over 3.5": {
+          "odds": 2.38,
+          "prono": 39.13
+        }
+      },
+      "fascia": "D",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "20:30",
+      "home": "FC Thun",
+      "away": "FC ST. Gallen",
+      "comp": "Super League • Svizzera",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.25,
+          "prono": 75.0
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 1-2",
+          "type": "MG",
+          "risk": "medio"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "21:00",
+      "home": "Arsenal",
+      "away": "Wolves",
+      "comp": "Premier League • Inghilterra",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.28,
+          "prono": 75.0
+        },
+        "Over 1.5": {
+          "odds": 1.17,
+          "prono": 81.04
+        }
+      },
+      "fascia": "A",
+      "multigoal": [
+        {
+          "label": "Multigoal 1-4",
+          "type": "MG",
+          "risk": "basso"
+        },
+        {
+          "label": "Multigoal 1-3",
+          "type": "MG",
+          "risk": "basso"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: 1X + Over 1.5",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        }
+      ]
+    },
+    {
+      "date": "13-12-2025",
+      "time": "21:30",
+      "home": "Sporting CP",
+      "away": "AVS",
+      "comp": "Primeira Liga • Portogallo",
+      "markets": {
+        "HT Over 0.5": {
+          "odds": 1.18,
+          "prono": 79.23
+        },
+        "Over 3.5": {
+          "odds": 1.8,
+          "prono": 51.48
+        }
+      },
+      "fascia": "B",
+      "multigoal": [
+        {
+          "label": "Multigoal 2-5",
+          "type": "MG",
+          "risk": "medio"
+        },
+        {
+          "label": "Multigoal 2-4",
+          "type": "MG",
+          "risk": "medio-alto"
+        }
+      ],
+      "devil_combos": [
+        {
+          "label": "Combo Diavolo: Over 0.5 HT + Over 1.5 (se live ok)",
+          "tag": "combo"
+        },
+        {
+          "label": "Combo Diavolo: Multigoal 2-5 (alternativa all’Over 3.5)",
+          "tag": "combo"
+        }
+      ]
+    }
+  ],
+  "devil_plays": [
+    {
+      "title": "Giocata del Diavolo #1 (prudente)",
+      "pick": "Barcelona – Osasuna: 1X + Over 1.5",
+      "note": "Se la quota sale troppo pre-live, passa a Multigoal 1-4."
+    },
+    {
+      "title": "Giocata del Diavolo #2 (aggressiva)",
+      "pick": "Sporting CP – AVS: Multigoal 2-5 (oppure 1 + Over 1.5)",
+      "note": "Se ritmo basso nei primi 15’, meglio no-bet o live dopo 1-0."
+    }
+  ],
+  "meta": {
+    "theme": "dark",
+    "no_words": [
+      "Genius"
+    ]
+  }
+}
