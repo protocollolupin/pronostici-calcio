@@ -4,331 +4,144 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Protocollo del Diavolo Bet</title>
-  <style>
-    :root {
-      --bg:#0b0f14; --panel:#111826; --panel2:#0f1623; --text:#e7eefc; --muted:#9fb0cc;
-      --accent:#7aa2ff; --danger:#ff6b6b; --ok:#36d399; --warn:#fbbf24; --line:#1d2a40;
-      --radius:18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      font-synthesis-weight: none;
-      text-rendering: optimizeLegibility;
-    }
-    *{box-sizing:border-box}
-    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; background:radial-gradient(1200px 800px at 20% -10%, #162035 0%, var(--bg) 55%); color:var(--text);}
-    a{color:inherit}
-    .topbar{position:sticky; top:0; z-index:50; backdrop-filter: blur(10px); background:rgba(11,15,20,.75); border-bottom:1px solid var(--line);}
-    .topbar-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 14px; max-width:1100px; margin:0 auto;}
-    .brand{display:flex; gap:10px; align-items:center;}
-    .logo{width:38px; height:38px; border-radius:14px; background:linear-gradient(135deg, rgba(122,162,255,.25), rgba(54,211,153,.12)); border:1px solid rgba(122,162,255,.35); display:grid; place-items:center; box-shadow:var(--shadow);}
-    .logo svg{opacity:.9}
-    .brand h1{font-size:16px; margin:0; letter-spacing:.2px}
-    .brand p{margin:0; font-size:12px; color:var(--muted)}
-    .actions{display:flex; gap:10px; align-items:center;}
-    .btn{border:1px solid var(--line); background:rgba(17,24,38,.8); color:var(--text); padding:10px 12px; border-radius:14px; display:inline-flex; gap:8px; align-items:center; text-decoration:none; box-shadow: 0 8px 20px rgba(0,0,0,.22);}
-    .btn:active{transform:translateY(1px)}
-    .btn-primary{border-color: rgba(122,162,255,.45); background: rgba(122,162,255,.15);}
-    .hamburger{width:42px; height:42px; border-radius:14px; display:grid; place-items:center; border:1px solid var(--line); background:rgba(17,24,38,.6);}
-    .container{max-width:1100px; margin:0 auto; padding:18px 14px 90px;}
-    .hero{margin-top:8px; padding:18px; border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(180deg, rgba(17,24,38,.85), rgba(17,24,38,.55)); box-shadow:var(--shadow);}
-    .hero-top{display:flex; gap:14px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;}
-    .pill{font-size:12px; color:var(--muted); padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:rgba(15,22,35,.65);}
-    .grid{display:grid; grid-template-columns:1fr; gap:12px; margin-top:14px;}
-    @media(min-width:860px){ .grid{grid-template-columns:1fr 1fr;} }
-    .card{border:1px solid var(--line); border-radius:var(--radius); background:rgba(15,22,35,.75); box-shadow:var(--shadow); overflow:hidden;}
-    .card-h{padding:14px 14px 10px; display:flex; justify-content:space-between; gap:12px; align-items:flex-start;}
-    .title{font-weight:700; font-size:14px; margin:0;}
-    .sub{margin:4px 0 0; font-size:12px; color:var(--muted);}
-    .badges{display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end;}
-    .badge{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(17,24,38,.75); color:var(--text);}
-    .badge.A{border-color: rgba(54,211,153,.55); background:rgba(54,211,153,.10);}
-    .badge.B{border-color: rgba(122,162,255,.45); background:rgba(122,162,255,.10);}
-    .badge.C{border-color: rgba(251,191,36,.55); background:rgba(251,191,36,.08);}
-    .badge.D{border-color: rgba(255,107,107,.55); background:rgba(255,107,107,.10);}
-    .card-b{padding:0 14px 14px;}
-    .rows{display:grid; gap:8px; margin-top:10px;}
-    .row{display:flex; justify-content:space-between; gap:10px; align-items:center; padding:10px 12px; border-radius:14px; border:1px solid var(--line); background:rgba(17,24,38,.6);}
-    .row .left{display:flex; flex-direction:column; gap:3px;}
-    .row .k{font-size:12px; color:var(--muted);}
-    .row .v{font-size:13px; font-weight:650;}
-    .kv{display:flex; gap:10px; align-items:center;}
-    .kv .chip{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(15,22,35,.75); color:var(--muted);}
-    .section{margin-top:16px;}
-    .section h2{margin:0 0 10px; font-size:14px; color:var(--text); letter-spacing:.2px}
-    .divider{height:1px; background:var(--line); margin:12px 0;}
-    /* drawer */
-    .drawer-backdrop{position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; z-index:60;}
-    .drawer{position:fixed; top:0; right:0; height:100%; width:min(86vw, 340px); background:rgba(15,22,35,.98); border-left:1px solid var(--line); box-shadow:var(--shadow); transform:translateX(105%); transition:transform .18s ease; z-index:70;}
-    .drawer.open{transform:translateX(0);}
-    .drawer-backdrop.open{display:block;}
-    .drawer h3{margin:0; padding:16px 16px 10px; font-size:14px;}
-    .nav{display:grid; gap:8px; padding:0 16px 16px;}
-    .nav a{text-decoration:none; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background:rgba(17,24,38,.6);}
-    .footerbar{position:fixed; left:0; right:0; bottom:0; background:rgba(11,15,20,.85); border-top:1px solid var(--line); backdrop-filter: blur(10px);}
-    .footer-inner{max-width:1100px; margin:0 auto; padding:10px 14px; display:flex; justify-content:space-between; gap:10px; align-items:center;}
-    .search{flex:1; display:flex; gap:10px;}
-    .search input{width:100%; padding:12px 14px; border-radius:14px; border:1px solid var(--line); background:rgba(17,24,38,.6); color:var(--text); outline:none;}
-    .small{font-size:12px; color:var(--muted)}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Top bar: hamburger + telegram -->
   <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2l2.2 6.6H21l-5.4 4 2.1 6.4L12 15.6 6.3 19l2.1-6.4L3 8.6h6.8L12 2z" stroke="currentColor" opacity=".9"/>
-          </svg>
-        </div>
-        <div>
-          <h1>Protocollo del Diavolo Bet</h1>
-          <p id="subtitle">Liste • Multigoal • Combo</p>
-        </div>
-      </div>
-      <div class="actions">
-        <a class="btn btn-primary" id="telegramBtn" href="https://t.me/Lupinlivesegnali" target="_blank" rel="noopener">Telegram</a>
-        <button class="hamburger" id="openDrawer" aria-label="Apri menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
+    <button class="iconbtn" id="menuBtn" aria-label="Apri menu" title="Menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <div class="topbar-center">
+      <div class="datepill" id="todayPill">Domenica 14/12/2025</div>
     </div>
+
+    <a class="telegrambtn" href="https://t.me/Lupinlivesegnali" target="_blank" rel="noopener">
+      Telegram
+    </a>
   </header>
 
-  <div class="drawer-backdrop" id="backdrop"></div>
-  <aside class="drawer" id="drawer" aria-label="Menu">
-    <h3>Menu</h3>
-    <div class="nav">
-      <a href="#diavolo" class="navlink">Giocata del Diavolo</a>
-      <a href="#multigoal" class="navlink">Lista Multigoal</a>
-      <a href="#ht" class="navlink">HT Over 0.5</a>
-      <a href="#o15" class="navlink">Over 1.5</a>
-      <a href="#o35" class="navlink">Over 3.5</a>
+  <!-- Drawer menu -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">Menu</div>
+      <button class="iconbtn" id="closeBtn" aria-label="Chiudi menu" title="Chiudi">✕</button>
+    </div>
+    <nav class="drawer-nav">
+      <button class="navitem" data-target="home">Home (Protocollo)</button>
+      <div class="navsep"></div>
+
+      <div class="navsection">Liste</div>
+      <button class="navitem" data-target="over15">Over 1.5</button>
+      <button class="navitem" data-target="ht">HT (Over 0.5)</button>
+      <button class="navitem" data-target="over35">Over 3.5</button>
+
+      <div class="navsep"></div>
+      <div class="navsection">Multigol</div>
+      <button class="navitem" data-target="mgTot">Multigol Totale</button>
+      <button class="navitem" data-target="mgCO">Multigol Casa / Ospite</button>
+      <button class="navitem" data-target="mgTT">Multigol 1° / 2° Tempo</button>
+
+      <div class="navsep"></div>
+      <div class="navsection">Schedine</div>
+      <button class="navitem" data-target="schedine">Schedine</button>
+
+      <div class="navsep"></div>
+      <div class="navsection">HT - Selezione</div>
+      <button class="navitem" data-target="htSolide">HT più solide</button>
+    </nav>
+    <div class="drawer-footer">
+      <a href="https://t.me/Lupinlivesegnali" target="_blank" rel="noopener" class="drawer-telegram">Apri Telegram</a>
     </div>
   </aside>
+  <div class="backdrop" id="backdrop" hidden></div>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-top">
-        <div>
-          <div class="pill">Aggiornamento: <span id="today"></span></div>
-          <div class="divider"></div>
-          <div class="small">Ricerca rapida: scrivi una squadra (es. “Arsenal”).</div>
-        </div>
-        <div class="pill">Tema scuro • Mobile first</div>
+  <!-- Pages -->
+  <main class="main">
+    <!-- HOME: must show only protocol plays -->
+    <section class="page active" id="home" data-page>
+      <div class="hero">
+        <div class="hero-title">Protocollo del Diavolo</div>
+        <div class="hero-sub">In home vedi solo le 2 giocate principali. Tutto il resto è nel menù ☰</div>
       </div>
 
-      <div class="grid" id="diavolo">
+      <div class="card">
+        <div class="card-title">Giocate principali (Home)</div>
+        <div class="list" id="protocolHome"></div>
+        <div class="note">Nota: liste e schedine complete sono accessibili solo dal menù.</div>
+      </div>
+    </section>
+
+    <section class="page" id="over15" data-page>
+      <h2>Lista Over 1.5</h2>
+      <div class="card">
+        <div class="card-title">In colonna (orario • quota)</div>
+        <div class="compact" id="listOver15"></div>
+      </div>
+    </section>
+
+    <section class="page" id="ht" data-page>
+      <h2>Lista HT (Over 0.5)</h2>
+      <div class="card">
+        <div class="card-title">In colonna (orario • quota)</div>
+        <div class="compact" id="listHT"></div>
+      </div>
+    </section>
+
+    <section class="page" id="over35" data-page>
+      <h2>Lista Over 3.5</h2>
+      <div class="card">
+        <div class="card-title">In colonna (orario • quota)</div>
+        <div class="compact" id="listOver35"></div>
+      </div>
+    </section>
+
+    <section class="page" id="mgTot" data-page>
+      <h2>Multigol Totale</h2>
+      <div class="card">
+        <div class="card-title">Derivata da Over 3.5</div>
+        <div class="compact" id="mgTotList"></div>
+      </div>
+    </section>
+
+    <section class="page" id="mgCO" data-page>
+      <h2>Multigol Casa / Ospite</h2>
+      <div class="grid2">
         <div class="card">
-          <div class="card-h">
-            <div>
-              <p class="title">Giocata del Diavolo #1 (prudente)</p>
-              <p class="sub" id="dev1pick"></p>
-            </div>
-            <div class="badges">
-              <span class="badge B">Combo</span>
-            </div>
-          </div>
-          <div class="card-b">
-            <div class="row">
-              <div class="left">
-                <div class="k">Nota Protocollo</div>
-                <div class="v" id="dev1note"></div>
-              </div>
-            </div>
-          </div>
+          <div class="card-title">Casa</div>
+          <div class="compact" id="mgCasaList"></div>
         </div>
-
         <div class="card">
-          <div class="card-h">
-            <div>
-              <p class="title">Giocata del Diavolo #2 (aggressiva)</p>
-              <p class="sub" id="dev2pick"></p>
-            </div>
-            <div class="badges">
-              <span class="badge C">Combo</span>
-            </div>
-          </div>
-          <div class="card-b">
-            <div class="row">
-              <div class="left">
-                <div class="k">Nota Protocollo</div>
-                <div class="v" id="dev2note"></div>
-              </div>
-            </div>
-          </div>
+          <div class="card-title">Ospite</div>
+          <div class="compact" id="mgOspiteList"></div>
         </div>
       </div>
+    </section>
 
-      <div class="section" id="multigoal">
-        <h2>Lista Multigoal (dalle liste di oggi)</h2>
-        <div class="grid" id="multigoalGrid"></div>
+    <section class="page" id="mgTT" data-page>
+      <h2>Multigol 1° / 2° Tempo</h2>
+      <div class="card">
+        <div class="card-title">Derivata dalla lista HT</div>
+        <div class="compact" id="mgTempiList"></div>
       </div>
+    </section>
 
-      <div class="section" id="ht">
-        <h2>HT Over 0.5</h2>
-        <div class="grid" id="htGrid"></div>
+    <section class="page" id="htSolide" data-page>
+      <h2>HT più solide</h2>
+      <div class="card">
+        <div class="card-title">Selezione Protocollo</div>
+        <div class="compact" id="htSolideList"></div>
       </div>
+    </section>
 
-      <div class="section" id="o15">
-        <h2>Over 1.5</h2>
-        <div class="grid" id="o15Grid"></div>
-      </div>
-
-      <div class="section" id="o35">
-        <h2>Over 3.5</h2>
-        <div class="grid" id="o35Grid"></div>
-      </div>
+    <section class="page" id="schedine" data-page>
+      <h2>Schedine</h2>
+      <div class="note">Qui trovi tutte le schedine (Top, Equilibrata, Spinta, Quota 10, Quota 20).</div>
+      <div id="schedineWrap"></div>
     </section>
   </main>
 
-  <div class="footerbar">
-    <div class="footer-inner">
-      <div class="search">
-        <input id="q" placeholder="Cerca squadra..." autocomplete="off" />
-      </div>
-      <span class="small" id="count"></span>
-    </div>
-  </div>
-
-  <script>
-    const state = { q: "" };
-
-    function esc(s) {
-      return String(s).replace(/[&<>"']/g, (c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    }
-
-    function mkCard(match, marketKey) {
-      const m = match;
-      const mk = m.markets[marketKey];
-      if (!mk) return "";
-      const pr = mk.prono ?? 0;
-      const fas = m.fascia ?? "B";
-      return `
-        <article class="card" data-home="${esc(m.home)}" data-away="${esc(m.away)}">
-          <div class="card-h">
-            <div>
-              <p class="title">${esc(m.time)} • ${esc(m.home)} – ${esc(m.away)}</p>
-              <p class="sub">${esc(m.comp)}</p>
-            </div>
-            <div class="badges">
-              <span class="badge ${esc(fas)}">Fascia ${esc(fas)}</span>
-              <span class="badge">Quota ${esc(mk.odds)}</span>
-            </div>
-          </div>
-          <div class="card-b">
-            <div class="rows">
-              <div class="row">
-                <div class="left">
-                  <div class="k">Mercato</div>
-                  <div class="v">${esc(marketKey)}</div>
-                </div>
-                <div class="kv">
-                  <span class="chip">Prono ${esc(pr.toFixed ? pr.toFixed(2) : pr)}</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="left">
-                  <div class="k">Multigoal</div>
-                  <div class="v">${esc(m.multigoal?.map(x=>x.label).join(" • ") || "-")}</div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="left">
-                  <div class="k">Combo del Diavolo</div>
-                  <div class="v">${esc(m.devil_combos?.map(x=>x.label).join(" / ") || "-")}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      `;
-    }
-
-    function mkMultiCard(match) {
-      const m = match;
-      const fas = m.fascia ?? "B";
-      const mg = (m.multigoal || []).map(x=>`<span class="badge">${esc(x.label)}</span>`).join(" ");
-      const combos = (m.devil_combos || []).map(x=>`<div class="row"><div class="left"><div class="k">Combo</div><div class="v">${esc(x.label)}</div></div></div>`).join("");
-      return `
-        <article class="card" data-home="${esc(m.home)}" data-away="${esc(m.away)}">
-          <div class="card-h">
-            <div>
-              <p class="title">${esc(m.time)} • ${esc(m.home)} – ${esc(m.away)}</p>
-              <p class="sub">${esc(m.comp)}</p>
-            </div>
-            <div class="badges">
-              <span class="badge ${esc(fas)}">Fascia ${esc(fas)}</span>
-            </div>
-          </div>
-          <div class="card-b">
-            <div class="rows">
-              <div class="row">
-                <div class="left">
-                  <div class="k">Proposte Multigoal</div>
-                  <div class="v">${mg || "-"}</div>
-                </div>
-              </div>
-              ${combos || ""}
-            </div>
-          </div>
-        </article>
-      `;
-    }
-
-    function renderAll(data) {
-      document.getElementById("today").textContent = data.date;
-      document.getElementById("dev1pick").textContent = data.devil_plays?.[0]?.pick || "";
-      document.getElementById("dev1note").textContent = data.devil_plays?.[0]?.note || "";
-      document.getElementById("dev2pick").textContent = data.devil_plays?.[1]?.pick || "";
-      document.getElementById("dev2note").textContent = data.devil_plays?.[1]?.note || "";
-
-      const ms = data.matches || [];
-      const ht = ms.filter(m => m.markets && m.markets["HT Over 0.5"]);
-      const o15 = ms.filter(m => m.markets && m.markets["Over 1.5"]);
-      const o35 = ms.filter(m => m.markets && m.markets["Over 3.5"]);
-
-      document.getElementById("multigoalGrid").innerHTML = ms.map(m=>mkMultiCard(m)).join("");
-      document.getElementById("htGrid").innerHTML = ht.map(m=>mkCard(m,"HT Over 0.5")).join("");
-      document.getElementById("o15Grid").innerHTML = o15.map(m=>mkCard(m,"Over 1.5")).join("");
-      document.getElementById("o35Grid").innerHTML = o35.map(m=>mkCard(m,"Over 3.5")).join("");
-
-      applyFilter();
-    }
-
-    function applyFilter() {
-      const q = state.q.trim().toLowerCase();
-      const cards = document.querySelectorAll("article.card");
-      let shown = 0;
-      cards.forEach(c => {
-        const h = (c.dataset.home || "").toLowerCase();
-        const a = (c.dataset.away || "").toLowerCase();
-        const ok = !q || h.includes(q) || a.includes(q);
-        c.style.display = ok ? "" : "none";
-        if (ok) shown++;
-      });
-      document.getElementById("count").textContent = `${shown} visibili`;
-    }
-
-    // drawer
-    const drawer = document.getElementById("drawer");
-    const backdrop = document.getElementById("backdrop");
-    function openDrawer() { drawer.classList.add("open"); backdrop.classList.add("open"); }
-    function closeDrawer() { drawer.classList.remove("open"); backdrop.classList.remove("open"); }
-    document.getElementById("openDrawer").addEventListener("click", openDrawer);
-    backdrop.addEventListener("click", closeDrawer);
-    document.querySelectorAll(".navlink").forEach(a=>a.addEventListener("click", closeDrawer));
-
-    // search
-    document.getElementById("q").addEventListener("input", (e)=>{ state.q = e.target.value; applyFilter(); });
-
-    fetch("./data.json")
-      .then(r=>r.json())
-      .then(renderAll)
-      .catch(err=>{
-        document.getElementById("subtitle").textContent = "Errore caricamento dati";
-        console.error(err);
-      });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
