@@ -2,60 +2,107 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Protocollo del Diavolo • Bet</title>
-  <meta name="description" content="Pronostici calcio in tema scuro: liste, schedine miste e Protocollo del Diavolo." />
-  <link rel="icon" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta name="description" content="Pronostici calcio in tema scuro con liste e Protocollo del Diavolo." />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
-    <button class="icon-btn" id="menuBtn" aria-label="Apri menu" aria-controls="drawer" aria-expanded="false">
+    <button class="icon-btn" id="menuBtn" aria-label="Apri menu">
       <span class="hamburger"></span>
     </button>
     <div class="brand">
       <div class="brand-title">Protocollo del Diavolo • Bet</div>
       <div class="brand-sub" id="brandSub"></div>
     </div>
-    <a class="telegram-btn" id="telegramBtn" href="#" target="_blank" rel="noreferrer">Telegram</a>
+    <a class="telegram-btn" id="telegramBtn" href="#" target="_blank" rel="noopener">Telegram</a>
   </header>
 
   <aside class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer-head">
       <div class="drawer-title">Menu</div>
-      <button class="icon-btn" id="closeBtn" aria-label="Chiudi menu">
-        ✕
-      </button>
+      <button class="icon-btn" id="closeBtn" aria-label="Chiudi menu">✕</button>
     </div>
+
     <nav class="nav">
       <a href="#home" class="nav-link">Home (Protocollo)</a>
       <div class="nav-section">Liste</div>
-      <a href="#ht-solide" class="nav-link">HT • Solide</a>
-      <a href="#ht-escluse" class="nav-link">HT • Escluse</a>
+      <a href="#ht-solide" class="nav-link">HT solide</a>
+      <a href="#ht-escluse" class="nav-link">HT escluse</a>
       <a href="#over15" class="nav-link">Over 1.5</a>
       <a href="#over35" class="nav-link">Over 3.5</a>
-
       <div class="nav-section">Schedine miste</div>
-      <a href="#schedine" class="nav-link">Quote 2 / 5 / 10 / 20</a>
-
+      <a href="#mix" class="nav-link">Quote ~2 / ~5 / ~10 / ~20</a>
       <div class="nav-section">Multigol</div>
-      <a href="#mg-casa-ospite" class="nav-link">Casa / Ospite</a>
+      <a href="#mg-casa-ospite" class="nav-link">Casa/Ospite</a>
       <a href="#mg-1t" class="nav-link">1° Tempo</a>
       <a href="#mg-2t" class="nav-link">2° Tempo</a>
-      <a href="#mg-totale" class="nav-link">Totale</a>
+      <a href="#mg-tot" class="nav-link">Totale</a>
     </nav>
-    <div class="drawer-foot">
-      <div class="muted small">Tema scuro • Liste compatte • Nessuna partita Guabirá</div>
-    </div>
   </aside>
 
-  <main class="container" id="app" role="main"></main>
+  <main class="container">
+    <!-- HOME: SOLO PROTOCOLLO -->
+    <section id="home" class="card">
+      <div class="card-head">
+        <h1>Protocollo del Diavolo</h1>
+        <div class="badge">Solo in home • minimo 3 giocate</div>
+      </div>
+      <div id="protocolloWrap" class="stack"></div>
+      <div class="note">
+        Home page: solo Protocollo (quota minima 2.00, 2–4 eventi). Partite escluse automaticamente: Guabirá.
+      </div>
+    </section>
 
-  <footer class="footer">
-    <div class="muted small">Aggiornato: <span id="updatedAt"></span></div>
-  </footer>
+    <!-- Tutto il resto sta nel menu -->
+    <section id="ht-solide" class="card">
+      <h2>HT solide</h2>
+      <div id="htSolide" class="list"></div>
+    </section>
 
-  <script src="assets/data.js"></script>
-  <script src="assets/app.js"></script>
+    <section id="ht-escluse" class="card">
+      <h2>HT escluse (filtro favorite)</h2>
+      <div id="htEscluse" class="list"></div>
+    </section>
+
+    <section id="over15" class="card">
+      <h2>Over 1.5</h2>
+      <div id="over15List" class="list"></div>
+    </section>
+
+    <section id="over35" class="card">
+      <h2>Over 3.5</h2>
+      <div id="over35List" class="list"></div>
+    </section>
+
+    <section id="mix" class="card">
+      <h2>Schedine miste (sempre 4)</h2>
+      <div id="mixWrap" class="grid"></div>
+    </section>
+
+    <section id="mg-casa-ospite" class="card">
+      <h2>Multigol Casa/Ospite</h2>
+      <div id="mgCasaOspite" class="list"></div>
+    </section>
+
+    <section id="mg-1t" class="card">
+      <h2>Multigol 1° Tempo</h2>
+      <div id="mg1t" class="list"></div>
+    </section>
+
+    <section id="mg-2t" class="card">
+      <h2>Multigol 2° Tempo</h2>
+      <div id="mg2t" class="list"></div>
+    </section>
+
+    <section id="mg-tot" class="card">
+      <h2>Multigol Totale</h2>
+      <div id="mgTot" class="list"></div>
+    </section>
+  </main>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,172 +1,175 @@
-const $ = (sel) => document.querySelector(sel);
-const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+(async function(){
+  const $ = (id)=>document.getElementById(id);
+  const drawer = $("drawer");
+  const backdrop = $("backdrop");
+  const openDrawer = ()=>{
+    drawer.classList.add("open");
+    drawer.setAttribute("aria-hidden","false");
+    backdrop.hidden = false;
+  };
+  const closeDrawer = ()=>{
+    drawer.classList.remove("open");
+    drawer.setAttribute("aria-hidden","true");
+    backdrop.hidden = true;
+  };
+  $("menuBtn").addEventListener("click", openDrawer);
+  $("closeBtn").addEventListener("click", closeDrawer);
+  backdrop.addEventListener("click", closeDrawer);
 
-let DATA = null;
-
-function openDrawer() {
-  $("#drawer").classList.add("open");
-  $("#backdrop").hidden = false;
-  $("#drawer").setAttribute("aria-hidden", "false");
-}
-function closeDrawer() {
-  $("#drawer").classList.remove("open");
-  $("#backdrop").hidden = true;
-  $("#drawer").setAttribute("aria-hidden", "true");
-}
-function showPage(id) {
-  $$("[data-page]").forEach(p => p.classList.remove("active"));
-  const el = document.getElementById(id);
-  if (el) el.classList.add("active");
-  closeDrawer();
-  // Keep scroll position sane on mobile
-  window.scrollTo({ top: 0, behavior: "instant" });
-}
-
-function rowHTML(time, match, quota, subtitle=null){
-  const sub = subtitle ? `<div class="p-pick">${subtitle}</div>` : "";
-  const matchHtml = subtitle ? `<div><div class="p-match">${match}</div>${sub}</div>` : `<div class="match">${match}</div>`;
-  return `
-    <div class="row">
-      <div class="time">${time || ""}</div>
-      ${matchHtml}
-      <div class="quota">@${quota}</div>
-    </div>
-  `;
-}
-
-function compactList(containerId, items, mode){
-  const el = document.getElementById(containerId);
-  if (!el) return;
-  el.innerHTML = items.map(it => {
-    if (mode === "withPick") {
-      const [t, home, away, pick, q] = it;
-      return rowHTML(t, `${home} – ${away}`, q, pick);
-    }
-    if (mode === "simplePick") {
-      const [home, away, pick] = it;
-      return rowHTML("", `${home} – ${away}`, "—", pick);
-    }
-    return "";
-  }).join("");
-}
-
-function protocolHome(){
-  const el = $("#protocolHome");
-  el.innerHTML = DATA.protocol_home.map(([match, pick]) => `
-    <div class="play">
-      <div class="match">${match}</div>
-      <div class="pick">${pick}</div>
-    </div>
-  `).join("");
-}
-
-function mgTempi(){
-  const el = $("#mgTempiList");
-  el.innerHTML = DATA.lists.multigol_tempi.map(([h,a,p1,p2]) => `
-    <div class="row">
-      <div class="time">—</div>
-      <div class="match">${h} – ${a}</div>
-      <div class="quota">${p1} / ${p2}</div>
-    </div>
-  `).join("");
-}
-
-function htSolide(){
-  const el = $("#htSolideList");
-  el.innerHTML = DATA.lists.ht_solide.map(([h,a]) => `
-    <div class="row">
-      <div class="time">—</div>
-      <div class="match">${h} – ${a}</div>
-      <div class="quota">SOLIDA</div>
-    </div>
-  `).join("");
-}
-
-function mgCO(){
-  const casa = $("#mgCasaList");
-  casa.innerHTML = DATA.lists.multigol_casa.map(([h,a,p]) => `
-    <div class="row">
-      <div class="time">—</div>
-      <div class="match">${h} – ${a}</div>
-      <div class="quota">${p}</div>
-    </div>
-  `).join("");
-  const osp = $("#mgOspiteList");
-  osp.innerHTML = DATA.lists.multigol_ospite.map(([h,a,p]) => `
-    <div class="row">
-      <div class="time">—</div>
-      <div class="match">${h} – ${a}</div>
-      <div class="quota">${p}</div>
-    </div>
-  `).join("");
-}
-
-function mgTot(){
-  const el = $("#mgTotList");
-  el.innerHTML = DATA.lists.multigol_totale.map(([h,a,p]) => `
-    <div class="row">
-      <div class="time">—</div>
-      <div class="match">${h} – ${a}</div>
-      <div class="quota">${p}</div>
-    </div>
-  `).join("");
-}
-
-function schedineRender(){
-  const wrap = $("#schedineWrap");
-  wrap.innerHTML = "";
-  const entries = Object.entries(DATA.lists.schedine);
-  for (const [title, picks] of entries){
-    const ticket = document.createElement("div");
-    ticket.className = "ticket";
-    const count = picks.length;
-    ticket.innerHTML = `
-      <div class="ticket-head">
-        <div class="ticket-title">${title}</div>
-        <div class="badge">${count} eventi</div>
-      </div>
-      <div class="ticket-body">
-        ${picks.map(([m,p]) => `
-          <div class="pickrow">
-            <div class="p-match">${m}</div>
-            <div class="p-pick">${p}</div>
-          </div>
-        `).join("")}
-      </div>
-    `;
-    wrap.appendChild(ticket);
-  }
-}
-
-async function init(){
-  // Events
-  $("#menuBtn").addEventListener("click", openDrawer);
-  $("#closeBtn").addEventListener("click", closeDrawer);
-  $("#backdrop").addEventListener("click", closeDrawer);
-  $$(".navitem").forEach(btn => {
-    btn.addEventListener("click", () => showPage(btn.dataset.target));
+  // close drawer on nav click
+  drawer.addEventListener("click", (e)=>{
+    const a = e.target.closest("a");
+    if(a){ closeDrawer(); }
   });
 
-  // Load data
-  const res = await fetch("data.json", { cache: "no-store" });
-  DATA = await res.json();
+  let data;
+  try{
+    const res = await fetch("data.json", {cache:"no-store"});
+    data = await res.json();
+  }catch(err){
+    console.error(err);
+    $("brandSub").textContent = "Errore caricamento dati";
+    return;
+  }
 
-  protocolHome();
+  $("brandSub").textContent = "Aggiornato: " + (data.updated || "");
+  const telegram = data.telegram || "https://t.me/";
+  $("telegramBtn").href = telegram;
+
+  const row = (item, opts={})=>{
+    const el = document.createElement("div");
+    el.className = "row";
+    el.innerHTML = `
+      <div class="row-top">
+        <div>
+          <div class="match">${escapeHtml(item.match)}</div>
+          <div class="meta">${escapeHtml(item.time || "")} • ${escapeHtml(item.league || "")}</div>
+        </div>
+        ${item.odd ? `<div class="odd">${escapeHtml(item.odd)}</div>` : ``}
+      </div>
+      ${item.pick ? `<div class="pick"><span class="pill good">${escapeHtml(item.pick)}</span><span class="pill">${item.odd ? "Quota" : ""}</span></div>` : ``}
+      ${item.reason ? `<div class="meta" style="margin-top:8px;"><span class="pill bad">Esclusa</span> ${escapeHtml(item.reason)}</div>` : ``}
+    `;
+    return el;
+  };
+
+  const simple = (item)=>{
+    const el = document.createElement("div");
+    el.className = "row";
+    el.innerHTML = `
+      <div class="row-top">
+        <div>
+          <div class="match">${escapeHtml(item.match)}</div>
+          <div class="meta">${item.pick ? escapeHtml(item.pick) : ""}</div>
+        </div>
+        <div class="odd">${item.odd ? escapeHtml(item.odd) : ""}</div>
+      </div>`;
+    return el;
+  };
+
+  // Protocollo (home)
+  const pWrap = $("protocolloWrap");
+  (data.protocollo || []).forEach(p=>{
+    const box = document.createElement("div");
+    box.className = "proto";
+    box.innerHTML = `<div class="proto-title">${escapeHtml(p.title || "Giocata")}</div>`;
+    (p.events || []).forEach((ev)=>{
+      const line = document.createElement("div");
+      line.className = "ev";
+      line.innerHTML = `
+        <div>
+          <div class="match">${escapeHtml(ev.match)}</div>
+          <div class="m">${escapeHtml(ev.market)}</div>
+        </div>
+      `;
+      box.appendChild(line);
+    });
+    pWrap.appendChild(box);
+  });
+
   // Lists
-  compactList("listOver15", DATA.lists.over15, "withPick");
-  compactList("listHT", DATA.lists.ht, "withPick");
-  compactList("listOver35", DATA.lists.over35, "withPick");
+  fillList($("htSolide"), data.lists?.ht_solide, true);
+  fillList($("htEscluse"), data.lists?.ht_escluse, false);
+  fillList($("over15List"), data.lists?.over15, true);
+  fillList($("over35List"), data.lists?.over35, true);
 
-  mgTot();
-  mgCO();
-  mgTempi();
-  htSolide();
-  schedineRender();
+  // Mixed slips
+  const mixWrap = $("mixWrap");
+  (data.mixed_slips || []).forEach(s=>{
+    const card = document.createElement("div");
+    card.className = "slip";
+    card.innerHTML = `
+      <div class="slip-head">
+        <div class="slip-title">${escapeHtml(s.title || "Schedina")}</div>
+        <div class="target">${escapeHtml(s.target || "")}</div>
+      </div>
+    `;
+    (s.events || []).forEach((ev)=>{
+      const line = document.createElement("div");
+      line.className = "ev";
+      line.innerHTML = `
+        <div>
+          <div class="match">${escapeHtml(ev.match)}</div>
+          <div class="m">${escapeHtml(ev.market)}</div>
+        </div>
+      `;
+      card.appendChild(line);
+    });
+    mixWrap.appendChild(card);
+  });
 
-  // default page is home (already active)
-}
+  // Multigol
+  fillSimple($("mgCasaOspite"), data.multigol?.casa_ospite);
+  fillSimple($("mg1t"), data.multigol?.primo_tempo);
+  fillSimple($("mg2t"), data.multigol?.secondo_tempo);
+  fillSimple($("mgTot"), data.multigol?.totale);
 
-init().catch(err => {
-  console.error(err);
-  alert("Errore nel caricamento dei dati. Controlla data.json.");
-});
+  function fillList(container, arr, showPick){
+    container.innerHTML = "";
+    (arr || []).forEach(it=>{
+      const el = document.createElement("div");
+      el.className = "row";
+      const topOdd = it.odd ? `<div class="odd">${escapeHtml(it.odd)}</div>` : "";
+      const pick = it.pick ? `<div class="pick"><span class="pill good">${escapeHtml(it.pick)}</span><span class="pill">Quota</span></div>` : "";
+      const reason = it.reason ? `<div class="meta" style="margin-top:8px;"><span class="pill bad">Esclusa</span> ${escapeHtml(it.reason)}</div>` : "";
+      el.innerHTML = `
+        <div class="row-top">
+          <div>
+            <div class="match">${escapeHtml(it.match)}</div>
+            <div class="meta">${escapeHtml(it.time || "")} • ${escapeHtml(it.league || "")}</div>
+          </div>
+          ${topOdd}
+        </div>
+        ${pick}
+        ${reason}
+      `;
+      container.appendChild(el);
+    });
+  }
+
+  function fillSimple(container, arr){
+    container.innerHTML = "";
+    (arr || []).forEach(it=>{
+      const el = document.createElement("div");
+      el.className = "row";
+      el.innerHTML = `
+        <div class="row-top">
+          <div>
+            <div class="match">${escapeHtml(it.match)}</div>
+            <div class="meta">${escapeHtml(it.pick || "")}</div>
+          </div>
+        </div>
+      `;
+      container.appendChild(el);
+    });
+  }
+
+  function escapeHtml(s){
+    return String(s ?? "")
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;")
+      .replaceAll("'","&#039;");
+  }
+})();

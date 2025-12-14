@@ -1,19 +1,8 @@
 {
-  "version": 2,
-  "public": true,
-  "headers": [
+  "rewrites": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
+      "source": "/",
+      "destination": "/index.html"
     }
   ]
 }

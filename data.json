@@ -1,554 +1,276 @@
 {
-  "today": "Domenica 14/12/2025",
+  "updated": "2025-12-15 00:40",
   "telegram": "https://t.me/Lupinlivesegnali",
-  "protocol_home": [
-    [
-      "Bayern Monaco – Mainz",
-      "Multigol Totale 2–5"
-    ],
-    [
-      "Marsiglia – Monaco",
-      "Multigol Totale 2–4"
-    ]
-  ],
-  "lists": {
-    "over15": [
-      [
-        "12:30",
-        "Gazişehir Gaziantep",
-        "Goztepe",
-        "Over 1.5",
-        "1.28"
-      ],
-      [
-        "14:30",
-        "Red Bull Salzburg",
-        "Wolfsberger AC",
-        "Over 1.5",
-        "1.20"
-      ],
-      [
-        "15:00",
-        "Nottingham Forest",
-        "Tottenham",
-        "Over 1.5",
-        "1.30"
-      ],
-      [
-        "15:00",
-        "West Ham",
-        "Aston Villa",
-        "Over 1.5",
-        "1.25"
-      ],
-      [
-        "15:00",
-        "Olympiakos",
-        "AEL",
-        "Over 1.5",
-        "1.25"
-      ],
-      [
-        "17:00",
-        "Atromitos",
-        "PAOK",
-        "Over 1.5",
-        "1.25"
-      ],
-      [
-        "17:15",
-        "Lens",
-        "Nice",
-        "Over 1.5",
-        "1.17"
-      ],
-      [
-        "17:30",
-        "Brentford",
-        "Leeds",
-        "Over 1.5",
-        "1.28"
-      ],
-      [
-        "18:00",
-        "Enosis",
-        "Pafos",
-        "Over 1.5",
-        "1.20"
-      ],
-      [
-        "18:00",
-        "FC Nordsjaelland",
-        "FC Midtjylland",
-        "Over 1.5",
-        "1.17"
-      ],
-      [
-        "18:30",
-        "Sparta Praha",
-        "Slovan Liberec",
-        "Over 1.5",
-        "1.25"
-      ],
-      [
-        "18:30",
-        "Levante",
-        "Villarreal",
-        "Over 1.5",
-        "1.20"
-      ],
-      [
-        "19:30",
-        "Werder Bremen",
-        "VfB Stuttgart",
-        "Over 1.5",
-        "1.17"
+  "protocollo": [
+    {
+      "title": "Protocollo del Diavolo • Giocata 1 (quota ~2)",
+      "events": [
+        {
+          "match": "Manchester United - Bournemouth",
+          "market": "Over 1.5"
+        },
+        {
+          "match": "Sakaryaspor - Hatayspor",
+          "market": "Over 0.5 HT"
+        }
       ]
-    ],
-    "ht": [
-      [
-        "14:00",
-        "BSC Young Boys",
-        "FC Luzern",
-        "Over 0.5 HT",
-        "1.25"
-      ],
-      [
-        "14:30",
-        "Ajax",
-        "Feyenoord",
-        "Over 0.5 HT",
-        "1.25"
-      ],
-      [
-        "14:30",
-        "Twente",
-        "GO Ahead Eagles",
-        "Over 0.5 HT",
-        "1.22"
-      ],
-      [
-        "16:30",
-        "FC Basel 1893",
-        "Lausanne",
-        "Over 0.5 HT",
-        "1.20"
-      ],
-      [
-        "17:15",
-        "Lens",
-        "Nice",
-        "Over 0.5 HT",
-        "1.25"
-      ],
-      [
-        "18:00",
-        "Slovan Bratislava",
-        "Žilina",
-        "Over 0.5 HT",
-        "1.25"
-      ],
-      [
-        "18:00",
-        "FC Nordsjaelland",
-        "FC Midtjylland",
-        "Over 0.5 HT",
-        "1.25"
-      ],
-      [
-        "19:15",
-        "Genk",
-        "KVC Westerlo",
-        "Over 0.5 HT",
-        "1.22"
-      ],
-      [
-        "19:30",
-        "Werder Bremen",
-        "VfB Stuttgart",
-        "Over 0.5 HT",
-        "1.25"
-      ],
-      [
-        "20:00",
-        "Independiente Petrolero",
-        "Always Ready",
-        "Over 0.5 HT",
-        "1.20"
-      ],
-      [
-        "20:00",
-        "Oriente Petrolero",
-        "Bolívar",
-        "Over 0.5 HT",
-        "1.20"
-      ],
-      [
-        "20:00",
-        "The Strongest",
-        "Jorge Wilstermann",
-        "Over 0.5 HT",
-        "1.17"
-      ],
-      [
-        "20:45",
-        "Marseille",
-        "Monaco",
-        "Over 0.5 HT",
-        "1.25"
-      ],
-      [
-        "22:30",
-        "Guabirá",
-        "Blooming",
-        "Over 0.5 HT",
-        "1.18"
+    },
+    {
+      "title": "Protocollo del Diavolo • Giocata 2 (quota ~2)",
+      "events": [
+        {
+          "match": "Beitar Jerusalem - Bnei Sakhnin",
+          "market": "Multigol Totale 1-3"
+        },
+        {
+          "match": "Castellón - Mirandés",
+          "market": "Over 1.5"
+        }
       ]
-    ],
-    "over35": [
-      [
-        "12:00",
-        "Real Sociedad W",
-        "Deportivo de La Coruña W",
-        "Over 3.5",
-        "2.50"
-      ],
-      [
-        "14:30",
-        "Red Bull Salzburg",
-        "Wolfsberger AC",
-        "Over 3.5",
-        "2.62"
-      ],
-      [
-        "15:00",
-        "Nottingham Forest",
-        "Tottenham",
-        "Over 3.5",
-        "3.50"
-      ],
-      [
-        "17:00",
-        "Atromitos",
-        "PAOK",
-        "Over 3.5",
-        "3.00"
-      ],
-      [
-        "17:30",
-        "Brentford",
-        "Leeds",
-        "Over 3.5",
-        "3.40"
-      ],
-      [
-        "17:30",
-        "Bayern Munich",
-        "FSV Mainz 05",
-        "Over 3.5",
-        "1.62"
-      ],
-      [
-        "18:30",
-        "Sparta Praha",
-        "Slovan Liberec",
-        "Over 3.5",
-        "3.00"
-      ],
-      [
-        "18:30",
-        "Levante",
-        "Villarreal",
-        "Over 3.5",
-        "2.50"
-      ],
-      [
-        "18:30",
-        "Almeria",
-        "Burgos",
-        "Over 3.5",
-        "4.00"
-      ],
-      [
-        "19:15",
-        "Genk",
-        "KVC Westerlo",
-        "Over 3.5",
-        "2.10"
-      ],
-      [
-        "20:00",
-        "The Strongest",
-        "Jorge Wilstermann",
-        "Over 3.5",
-        "1.67"
-      ],
-      [
-        "20:45",
-        "Marseille",
-        "Monaco",
-        "Over 3.5",
-        "2.20"
-      ],
-      [
-        "21:30",
-        "Arouca",
-        "Alverca",
-        "Over 3.5",
-        "4.00"
-      ],
-      [
-        "22:30",
-        "Guabirá",
-        "Blooming",
-        "Over 3.5",
-        "1.67"
-      ]
-    ],
-    "multigol_totale": [
-      [
-        "Bayern Munich",
-        "FSV Mainz 05",
-        "Multigol 2–4"
-      ],
-      [
-        "The Strongest",
-        "Jorge Wilstermann",
-        "Multigol 2–5"
-      ],
-      [
-        "Guabirá",
-        "Blooming",
-        "Multigol 2–4"
-      ],
-      [
-        "Marseille",
-        "Monaco",
-        "Multigol 2–4"
-      ],
-      [
-        "Genk",
-        "KVC Westerlo",
-        "Multigol 2–4"
-      ]
-    ],
-    "multigol_casa": [
-      [
-        "Bayern Munich",
-        "FSV Mainz 05",
-        "Casa Multigol 2–3"
-      ],
-      [
-        "The Strongest",
-        "Jorge Wilstermann",
-        "Casa Multigol 2–4"
-      ]
-    ],
-    "multigol_ospite": [
-      [
-        "Marseille",
-        "Monaco",
-        "Ospite Multigol 1–2"
-      ],
-      [
-        "Nottingham Forest",
-        "Tottenham",
-        "Ospite Multigol 1–3"
-      ]
-    ],
-    "multigol_tempi": [
-      [
-        "Ajax",
-        "Feyenoord",
-        "1°T Multigol 1–2",
-        "2°T Multigol 1–3"
-      ],
-      [
-        "Marseille",
-        "Monaco",
-        "1°T Multigol 1–1",
-        "2°T Multigol 1–3"
-      ],
-      [
-        "The Strongest",
-        "Jorge Wilstermann",
-        "1°T Multigol 1–2",
-        "2°T Multigol 1–3"
-      ]
-    ],
-    "ht_solide": [
-      [
-        "Ajax",
-        "Feyenoord"
-      ],
-      [
-        "Marseille",
-        "Monaco"
-      ],
-      [
-        "The Strongest",
-        "Jorge Wilstermann"
-      ],
-      [
-        "Oriente Petrolero",
-        "Bolívar"
-      ],
-      [
-        "FC Nordsjaelland",
-        "FC Midtjylland"
-      ],
-      [
-        "Werder Bremen",
-        "VfB Stuttgart"
-      ]
-    ],
-    "schedine": {
-      "Top solida (Anti-rischio) ~3": [
-        [
-          "Ajax – Feyenoord",
-          "Over 0.5 HT"
-        ],
-        [
-          "Bayern Monaco – Mainz",
-          "Multigol Totale 2–4"
-        ],
-        [
-          "Werder Brema – Stoccarda",
-          "Over 1.5"
-        ],
-        [
-          "Nordsjaelland – Midtjylland",
-          "Over 0.5 HT"
-        ],
-        [
-          "The Strongest – Wilstermann",
-          "Multigol Totale 2–5"
-        ],
-        [
-          "Marsiglia – Monaco",
-          "Over 0.5 HT"
-        ]
-      ],
-      "Fortezza equilibrata ~4.5": [
-        [
-          "Bayern Monaco – Mainz",
-          "Multigol Totale 2–5"
-        ],
-        [
-          "Ajax – Feyenoord",
-          "1° Tempo Multigol 1–2"
-        ],
-        [
-          "Genk – Westerlo",
-          "Over 3.5"
-        ],
-        [
-          "Guabirá – Blooming",
-          "Multigol Totale 2–4"
-        ],
-        [
-          "Brentford – Leeds",
-          "Over 1.5"
-        ],
-        [
-          "The Strongest – Wilstermann",
-          "Over 1.5"
-        ],
-        [
-          "Lens – Nice",
-          "Over 1.5"
-        ]
-      ],
-      "Protocollo spinto ~6": [
-        [
-          "Marsiglia – Monaco",
-          "Multigol Totale 2–4"
-        ],
-        [
-          "Nottingham – Tottenham",
-          "Ospite Multigol 1–3"
-        ],
-        [
-          "Sparta Praga – Liberec",
-          "Multigol Totale 2–4"
-        ],
-        [
-          "Salzburg – Wolfsberger",
-          "Casa Multigol 2–4"
-        ],
-        [
-          "Ajax – Feyenoord",
-          "Over 1.5"
-        ],
-        [
-          "Guabirá – Blooming",
-          "Over 3.5"
-        ]
-      ],
-      "Spinta quota ~10": [
-        [
-          "Bayern Monaco – Mainz",
-          "Multigol Totale 3–5"
-        ],
-        [
-          "Marsiglia – Monaco",
-          "Multigol Totale 3–4"
-        ],
-        [
-          "Ajax – Feyenoord",
-          "1° Tempo Multigol 1–2"
-        ],
-        [
-          "The Strongest – Wilstermann",
-          "Over 3.5"
-        ],
-        [
-          "Genk – Westerlo",
-          "Over 3.5"
-        ],
-        [
-          "Tottenham @ Nottingham",
-          "Ospite Multigol 2–3"
-        ],
-        [
-          "Guabirá – Blooming",
-          "Multigol Totale 3–5"
-        ]
-      ],
-      "Ultra quota ~20": [
-        [
-          "Bayern Monaco – Mainz",
-          "Multigol Totale 4–6"
-        ],
-        [
-          "Marsiglia – Monaco",
-          "Multigol Totale 4–5"
-        ],
-        [
-          "Ajax – Feyenoord",
-          "Risultato 1° Tempo: 1–1"
-        ],
-        [
-          "Genk – Westerlo",
-          "Multigol Totale 3–5"
-        ],
-        [
-          "Brentford – Leeds",
-          "Over 3.5"
-        ],
-        [
-          "Salzburg – Wolfsberger",
-          "Casa Multigol 3–5"
-        ],
-        [
-          "Guabirá – Blooming",
-          "Over 4.5"
-        ],
-        [
-          "Nottingham – Tottenham",
-          "Ospite vince + Over 1.5"
-        ]
+    },
+    {
+      "title": "Protocollo del Diavolo • Giocata 3 (quota ~2)",
+      "events": [
+        {
+          "match": "Manchester United - Bournemouth",
+          "market": "Multigol Totale 2-4"
+        },
+        {
+          "match": "Sakaryaspor - Hatayspor",
+          "market": "Over 1.5"
+        }
       ]
     }
+  ],
+  "lists": {
+    "ht_solide": [
+      {
+        "time": "21:00",
+        "league": "Premier League • Inghilterra",
+        "match": "Manchester United - Bournemouth",
+        "pick": "Over 0.5 HT",
+        "odd": "1.28"
+      },
+      {
+        "time": "19:30",
+        "league": "Ligat Ha'al • Israele",
+        "match": "Beitar Jerusalem - Bnei Sakhnin",
+        "pick": "Over 0.5 HT",
+        "odd": "1.28"
+      },
+      {
+        "time": "18:00",
+        "league": "1. Lig • Turchia",
+        "match": "Sakaryaspor - Hatayspor",
+        "pick": "Over 0.5 HT",
+        "odd": "1.22"
+      }
+    ],
+    "ht_escluse": [
+      {
+        "time": "21:45",
+        "league": "Primeira Liga • Portogallo",
+        "match": "Porto - Estrela",
+        "reason": "Favorita troppo schiacciata → rischio 0-0 HT"
+      },
+      {
+        "time": "19:30",
+        "league": "Super Liga • Serbia",
+        "match": "TSC Backa Topola - FK Crvena Zvezda",
+        "reason": "Favorita troppo schiacciata → rischio 0-0 HT"
+      },
+      {
+        "time": "19:00",
+        "league": "Ligat Ha'al • Israele",
+        "match": "Maccabi Tel Aviv - Hapoel Petah Tikva",
+        "reason": "Favorita troppo schiacciata → rischio 0-0 HT"
+      },
+      {
+        "time": "18:00",
+        "league": "Süper Lig • Turchia",
+        "match": "Fenerbahce - Konyaspor",
+        "reason": "Favorita troppo schiacciata → rischio 0-0 HT"
+      }
+    ],
+    "over15": [
+      {
+        "time": "21:00",
+        "league": "Premier League • Inghilterra",
+        "match": "Manchester United - Bournemouth",
+        "pick": "Over 1.5",
+        "odd": "1.17"
+      },
+      {
+        "time": "20:30",
+        "league": "Segunda División • Spagna",
+        "match": "Castellón - Mirandés",
+        "pick": "Over 1.5",
+        "odd": "1.20"
+      },
+      {
+        "time": "20:30",
+        "league": "Serie C - Girone C • Italia",
+        "match": "Crotone - Casarano",
+        "pick": "Over 1.5",
+        "odd": "1.30"
+      },
+      {
+        "time": "18:00",
+        "league": "1. Division • Cipro",
+        "match": "AEK Larnaca - Omonia Nicosia",
+        "pick": "Over 1.5",
+        "odd": "1.28"
+      }
+    ],
+    "over35": [
+      {
+        "time": "21:00",
+        "league": "Premier League • Inghilterra",
+        "match": "Manchester United - Bournemouth",
+        "pick": "Over 3.5",
+        "odd": "2.38"
+      },
+      {
+        "time": "19:00",
+        "league": "Ligat Ha'al • Israele",
+        "match": "Maccabi Tel Aviv - Hapoel Petah Tikva",
+        "pick": "Over 3.5",
+        "odd": "2.20"
+      },
+      {
+        "time": "18:00",
+        "league": "Süper Lig • Turchia",
+        "match": "Fenerbahce - Konyaspor",
+        "pick": "Over 3.5",
+        "odd": "2.20"
+      },
+      {
+        "time": "18:00",
+        "league": "1. Lig • Turchia",
+        "match": "Sakaryaspor - Hatayspor",
+        "pick": "Over 3.5",
+        "odd": "2.10"
+      }
+    ]
+  },
+  "mixed_slips": [
+    {
+      "target": "~2",
+      "title": "Schedina Mista Quota ~2",
+      "events": [
+        {
+          "match": "Manchester United - Bournemouth",
+          "market": "Over 1.5"
+        },
+        {
+          "match": "Sakaryaspor - Hatayspor",
+          "market": "Over 0.5 HT"
+        }
+      ]
+    },
+    {
+      "target": "~5",
+      "title": "Schedina Mista Quota ~5",
+      "events": [
+        {
+          "match": "Manchester United - Bournemouth",
+          "market": "Over 3.5"
+        },
+        {
+          "match": "Beitar Jerusalem - Bnei Sakhnin",
+          "market": "Multigol Totale 1-3"
+        },
+        {
+          "match": "Castellón - Mirandés",
+          "market": "Over 1.5"
+        }
+      ]
+    },
+    {
+      "target": "~10",
+      "title": "Schedina Mista Quota ~10",
+      "events": [
+        {
+          "match": "Manchester United - Bournemouth",
+          "market": "Over 3.5"
+        },
+        {
+          "match": "Fenerbahce - Konyaspor",
+          "market": "Over 3.5"
+        },
+        {
+          "match": "Sakaryaspor - Hatayspor",
+          "market": "Over 1.5"
+        },
+        {
+          "match": "AEK Larnaca - Omonia Nicosia",
+          "market": "Over 1.5"
+        }
+      ]
+    },
+    {
+      "target": "~20",
+      "title": "Schedina Mista Quota ~20",
+      "events": [
+        {
+          "match": "Manchester United - Bournemouth",
+          "market": "Over 3.5"
+        },
+        {
+          "match": "Fenerbahce - Konyaspor",
+          "market": "Over 3.5"
+        },
+        {
+          "match": "Sakaryaspor - Hatayspor",
+          "market": "Over 3.5"
+        },
+        {
+          "match": "Crotone - Casarano",
+          "market": "Over 1.5"
+        }
+      ]
+    }
+  ],
+  "multigol": {
+    "casa_ospite": [
+      {
+        "match": "Manchester United - Bournemouth",
+        "pick": "Casa 1-3"
+      },
+      {
+        "match": "Sakaryaspor - Hatayspor",
+        "pick": "Totale 1-3"
+      }
+    ],
+    "primo_tempo": [
+      {
+        "match": "Beitar Jerusalem - Bnei Sakhnin",
+        "pick": "0-2 HT"
+      },
+      {
+        "match": "Sakaryaspor - Hatayspor",
+        "pick": "1-2 HT"
+      }
+    ],
+    "secondo_tempo": [
+      {
+        "match": "Manchester United - Bournemouth",
+        "pick": "1-3 2T"
+      },
+      {
+        "match": "Fenerbahce - Konyaspor",
+        "pick": "1-3 2T"
+      }
+    ],
+    "totale": [
+      {
+        "match": "Manchester United - Bournemouth",
+        "pick": "2-4"
+      },
+      {
+        "match": "Fenerbahce - Konyaspor",
+        "pick": "2-4"
+      }
+    ]
   }
 }
