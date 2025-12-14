@@ -2,146 +2,60 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Protocollo del Diavolo Bet</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Protocollo del Diavolo • Bet</title>
+  <meta name="description" content="Pronostici calcio in tema scuro: liste, schedine miste e Protocollo del Diavolo." />
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <!-- Top bar: hamburger + telegram -->
   <header class="topbar">
-    <button class="iconbtn" id="menuBtn" aria-label="Apri menu" title="Menu">
+    <button class="icon-btn" id="menuBtn" aria-label="Apri menu" aria-controls="drawer" aria-expanded="false">
       <span class="hamburger"></span>
     </button>
-
-    <div class="topbar-center">
-      <div class="datepill" id="todayPill">Domenica 14/12/2025</div>
+    <div class="brand">
+      <div class="brand-title">Protocollo del Diavolo • Bet</div>
+      <div class="brand-sub" id="brandSub"></div>
     </div>
-
-    <a class="telegrambtn" href="https://t.me/Lupinlivesegnali" target="_blank" rel="noopener">
-      Telegram
-    </a>
+    <a class="telegram-btn" id="telegramBtn" href="#" target="_blank" rel="noreferrer">Telegram</a>
   </header>
 
-  <!-- Drawer menu -->
   <aside class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer-head">
       <div class="drawer-title">Menu</div>
-      <button class="iconbtn" id="closeBtn" aria-label="Chiudi menu" title="Chiudi">✕</button>
+      <button class="icon-btn" id="closeBtn" aria-label="Chiudi menu">
+        ✕
+      </button>
     </div>
-    <nav class="drawer-nav">
-      <button class="navitem" data-target="home">Home (Protocollo)</button>
-      <div class="navsep"></div>
+    <nav class="nav">
+      <a href="#home" class="nav-link">Home (Protocollo)</a>
+      <div class="nav-section">Liste</div>
+      <a href="#ht-solide" class="nav-link">HT • Solide</a>
+      <a href="#ht-escluse" class="nav-link">HT • Escluse</a>
+      <a href="#over15" class="nav-link">Over 1.5</a>
+      <a href="#over35" class="nav-link">Over 3.5</a>
 
-      <div class="navsection">Liste</div>
-      <button class="navitem" data-target="over15">Over 1.5</button>
-      <button class="navitem" data-target="ht">HT (Over 0.5)</button>
-      <button class="navitem" data-target="over35">Over 3.5</button>
+      <div class="nav-section">Schedine miste</div>
+      <a href="#schedine" class="nav-link">Quote 2 / 5 / 10 / 20</a>
 
-      <div class="navsep"></div>
-      <div class="navsection">Multigol</div>
-      <button class="navitem" data-target="mgTot">Multigol Totale</button>
-      <button class="navitem" data-target="mgCO">Multigol Casa / Ospite</button>
-      <button class="navitem" data-target="mgTT">Multigol 1° / 2° Tempo</button>
-
-      <div class="navsep"></div>
-      <div class="navsection">Schedine</div>
-      <button class="navitem" data-target="schedine">Schedine</button>
-
-      <div class="navsep"></div>
-      <div class="navsection">HT - Selezione</div>
-      <button class="navitem" data-target="htSolide">HT più solide</button>
+      <div class="nav-section">Multigol</div>
+      <a href="#mg-casa-ospite" class="nav-link">Casa / Ospite</a>
+      <a href="#mg-1t" class="nav-link">1° Tempo</a>
+      <a href="#mg-2t" class="nav-link">2° Tempo</a>
+      <a href="#mg-totale" class="nav-link">Totale</a>
     </nav>
-    <div class="drawer-footer">
-      <a href="https://t.me/Lupinlivesegnali" target="_blank" rel="noopener" class="drawer-telegram">Apri Telegram</a>
+    <div class="drawer-foot">
+      <div class="muted small">Tema scuro • Liste compatte • Nessuna partita Guabirá</div>
     </div>
   </aside>
-  <div class="backdrop" id="backdrop" hidden></div>
 
-  <!-- Pages -->
-  <main class="main">
-    <!-- HOME: must show only protocol plays -->
-    <section class="page active" id="home" data-page>
-      <div class="hero">
-        <div class="hero-title">Protocollo del Diavolo</div>
-        <div class="hero-sub">In home vedi solo le 2 giocate principali. Tutto il resto è nel menù ☰</div>
-      </div>
+  <main class="container" id="app" role="main"></main>
 
-      <div class="card">
-        <div class="card-title">Giocate principali (Home)</div>
-        <div class="list" id="protocolHome"></div>
-        <div class="note">Nota: liste e schedine complete sono accessibili solo dal menù.</div>
-      </div>
-    </section>
+  <footer class="footer">
+    <div class="muted small">Aggiornato: <span id="updatedAt"></span></div>
+  </footer>
 
-    <section class="page" id="over15" data-page>
-      <h2>Lista Over 1.5</h2>
-      <div class="card">
-        <div class="card-title">In colonna (orario • quota)</div>
-        <div class="compact" id="listOver15"></div>
-      </div>
-    </section>
-
-    <section class="page" id="ht" data-page>
-      <h2>Lista HT (Over 0.5)</h2>
-      <div class="card">
-        <div class="card-title">In colonna (orario • quota)</div>
-        <div class="compact" id="listHT"></div>
-      </div>
-    </section>
-
-    <section class="page" id="over35" data-page>
-      <h2>Lista Over 3.5</h2>
-      <div class="card">
-        <div class="card-title">In colonna (orario • quota)</div>
-        <div class="compact" id="listOver35"></div>
-      </div>
-    </section>
-
-    <section class="page" id="mgTot" data-page>
-      <h2>Multigol Totale</h2>
-      <div class="card">
-        <div class="card-title">Derivata da Over 3.5</div>
-        <div class="compact" id="mgTotList"></div>
-      </div>
-    </section>
-
-    <section class="page" id="mgCO" data-page>
-      <h2>Multigol Casa / Ospite</h2>
-      <div class="grid2">
-        <div class="card">
-          <div class="card-title">Casa</div>
-          <div class="compact" id="mgCasaList"></div>
-        </div>
-        <div class="card">
-          <div class="card-title">Ospite</div>
-          <div class="compact" id="mgOspiteList"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page" id="mgTT" data-page>
-      <h2>Multigol 1° / 2° Tempo</h2>
-      <div class="card">
-        <div class="card-title">Derivata dalla lista HT</div>
-        <div class="compact" id="mgTempiList"></div>
-      </div>
-    </section>
-
-    <section class="page" id="htSolide" data-page>
-      <h2>HT più solide</h2>
-      <div class="card">
-        <div class="card-title">Selezione Protocollo</div>
-        <div class="compact" id="htSolideList"></div>
-      </div>
-    </section>
-
-    <section class="page" id="schedine" data-page>
-      <h2>Schedine</h2>
-      <div class="note">Qui trovi tutte le schedine (Top, Equilibrata, Spinta, Quota 10, Quota 20).</div>
-      <div id="schedineWrap"></div>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
